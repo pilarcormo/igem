@@ -8,4 +8,4 @@
 
 - [1993](https://github.com/pilarcormo/igem/blob/master/Papers/model93.pdf) - Optimization of molecular design in the evolution of metabolism: the glycogen molecule 
 - [1996](https://github.com/pilarcormo/igem/blob/master/Papers/model96.pdf) - How Did Glycogen Structure Evolve to Satisfy the Requirement for Rapid Mobilization of Glucose? A Problem of Physical Constraints in Structure Building
-- [1998]((https://github.com/pilarcormo/igem/blob/master/Papers/model98.pdf)) - Physical constraints in the synthesis of glycogen that influence its structural homogeneity: A two-dimensional approach
+- [1998](https://github.com/pilarcormo/igem/blob/master/Papers/model98.pdf)) - Physical constraints in the synthesis of glycogen that influence its structural homogeneity: A two-dimensional approach
