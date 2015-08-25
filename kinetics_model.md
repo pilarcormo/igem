@@ -1,6 +1,6 @@
 #####Assumptions:
 
-We generated a deterministic model taking into consideration the following assumptions.
+We generated a deterministic model taking into consideration the following assumptions:
 
 - All enzyme concentrations are constant and similar. We fixed the enzyme concentrations to 1x10-5 mmol/mL
 
@@ -19,31 +19,23 @@ We generated a deterministic model taking into consideration the following assum
 
 Enzyme| Km (mmol/mL)| Reference
 -----|-----|----:
-Phosphoglucomutase(G1P)| 0.00029| [1](http://www.sciencedirect.com/science/article/pii/S1096717699901453)
-Phosphoglucomutase(G6P)|5.6e-06| [1](http://www.sciencedirect.com/science/article/pii/S1096717699901453)
-GlgC(ADPG)| 4e-05|
-GlgC(ATP) |0.00032|
-GlgA|3.5e-05
-GlgB(Glucan1-4)| 1e-05|
-GlgB(Glycogen)| 2e-07|
-GlgX (Glycogen)| 1e-06|
+Phosphoglucomutase(G1P)| 2.9x10-4| [1](http://www.sciencedirect.com/science/article/pii/S1096717699901453)
+Phosphoglucomutase(G6P)|5.6x10-6| [1](http://www.sciencedirect.com/science/article/pii/S1096717699901453)
+GlgC(ADPG)| 4x10-5|[2](http://www.ncbi.nlm.nih.gov/pubmed/21741429)
+GlgC(ATP) |3.2x10-4|[2](http://www.ncbi.nlm.nih.gov/pubmed/21741429)
+GlgA|3.5x10-5|[3](http://www.ncbi.nlm.nih.gov/pubmed/2288)
+GlgB(Glucan1-4)| 1.42x10-5| [4](http://www.ncbi.nlm.nih.gov/pubmed/11368019)
+GlgX (Glycogen)| 1x10-6| -not found-
 
 
 2 substrate irreversible reaction: Vmax*substrateA*substrateB/(KmB*substrateA + kmA*substrateB + substrateA*substrateB)
 
-The first reactions of the pathway are highly efficient, as all the initial glucose-6-P converted to glucose-1-P and ADP-glucose is used in the production of glucan. 
+All the reactions of the pathway are highly efficient, as all the initial glucose-6-P converted to glucose-1-P and ADP-glucose is used in the production of glycogen. Part of the glucose-1-P is recovered due to the GlgX debranching activity.
 
-After running our model for 10000 seconds and collecting the data in intevals of  10 seconds, we saw that glycogen branching is not a favored process. Under basal conditions, the reversability of GlgB and the action of GlgX favored the linear structure of glycogen (glucan-1-4). If we start with a concentration of 5 mmol/mL of Glucose-6-P (G6P), after the time course the majority of this glucose has been used to produce linear glucan and only a small part of the glucose is generating branched  glycogen:
-
-![](concentrations_after_1.png)
+We run our model for 2500 seconds and collect the data in intevals of 0.05 seconds starting with a concentration of 10 mmol/mL of Glucose-6-P (G6P). After the time course, the majority of the starting glucose has been used to produce glycogen and only a small part of the glucose stays unbranched.
 
 
 ![](basal_model.png)
-
-
-Then, if we change GlgB Kms for the glucan from 1e-5 mmol/mL to 1e-6 mmol/mL, we can see how the glycogen production is increased:
-
-![](change_glgB.png)
 
 
 
