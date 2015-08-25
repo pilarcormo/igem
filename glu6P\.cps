@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- generated with COPASI 4.15 (Build 95) (http://www.copasi.org) at 2015-08-25 14:54:20 UTC -->
+<!-- generated with COPASI 4.15 (Build 95) (http://www.copasi.org) at 2015-08-25 16:15:53 UTC -->
 <?oxygen RNGSchema="http://www.copasi.org/static/schema/CopasiML.rng" type="xml"?>
 <COPASI xmlns="http://www.copasi.org/static/schema" versionMajor="4" versionMinor="15" versionDevel="95" copasiSourcesModified="0">
   <ListOfFunctions>
@@ -64,14 +64,14 @@
 
       </MiriamAnnotation>
       <Expression>
-        Vmax*substrateA*substrateB/(KmB*substrateA + kmA*substrateB + substrateA*substrateB)
+        Vmax*substrateA*substrateB/(KmB*KmA + KmB*substrateA + KmA*substrateB + substrateA*substrateB)
       </Expression>
       <ListOfParameterDescriptions>
         <ParameterDescription key="FunctionParameter_302" name="Vmax" order="0" role="constant"/>
         <ParameterDescription key="FunctionParameter_298" name="substrateA" order="1" role="substrate"/>
         <ParameterDescription key="FunctionParameter_295" name="substrateB" order="2" role="substrate"/>
         <ParameterDescription key="FunctionParameter_304" name="KmB" order="3" role="constant"/>
-        <ParameterDescription key="FunctionParameter_306" name="kmA" order="4" role="constant"/>
+        <ParameterDescription key="FunctionParameter_283" name="KmA" order="4" role="constant"/>
       </ListOfParameterDescriptions>
     </Function>
   </ListOfFunctions>
@@ -179,7 +179,9 @@
       </Metabolite>
       <Metabolite key="Metabolite_11" name="ATP" simulationType="fixed" compartment="Compartment_1">
         <MiriamAnnotation>
-<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:RDF
+   xmlns:dcterms="http://purl.org/dc/terms/"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
   <rdf:Description rdf:about="#Metabolite_11">
     <dcterms:created>
       <rdf:Description>
@@ -188,6 +190,7 @@
     </dcterms:created>
   </rdf:Description>
 </rdf:RDF>
+
         </MiriamAnnotation>
       </Metabolite>
       <Metabolite key="Metabolite_13" name="1,4glucan" simulationType="reactions" compartment="Compartment_1">
@@ -205,7 +208,9 @@
       </Metabolite>
       <Metabolite key="Metabolite_15" name="GlgX" simulationType="fixed" compartment="Compartment_1">
         <MiriamAnnotation>
-<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:RDF
+   xmlns:dcterms="http://purl.org/dc/terms/"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
   <rdf:Description rdf:about="#Metabolite_15">
     <dcterms:created>
       <rdf:Description>
@@ -214,11 +219,14 @@
     </dcterms:created>
   </rdf:Description>
 </rdf:RDF>
+
         </MiriamAnnotation>
       </Metabolite>
       <Metabolite key="Metabolite_17" name="GlgC" simulationType="fixed" compartment="Compartment_1">
         <MiriamAnnotation>
-<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:RDF
+   xmlns:dcterms="http://purl.org/dc/terms/"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
   <rdf:Description rdf:about="#Metabolite_17">
     <dcterms:created>
       <rdf:Description>
@@ -227,19 +235,7 @@
     </dcterms:created>
   </rdf:Description>
 </rdf:RDF>
-        </MiriamAnnotation>
-      </Metabolite>
-      <Metabolite key="Metabolite_19" name="AMP" simulationType="fixed" compartment="Compartment_1">
-        <MiriamAnnotation>
-<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-  <rdf:Description rdf:about="#Metabolite_19">
-    <dcterms:created>
-      <rdf:Description>
-        <dcterms:W3CDTF>2015-07-30T18:22:13Z</dcterms:W3CDTF>
-      </rdf:Description>
-    </dcterms:created>
-  </rdf:Description>
-</rdf:RDF>
+
         </MiriamAnnotation>
       </Metabolite>
       <Metabolite key="Metabolite_21" name="ADP" simulationType="fixed" compartment="Compartment_1">
@@ -271,9 +267,11 @@
 
         </MiriamAnnotation>
       </Metabolite>
-      <Metabolite key="Metabolite_25" name="GlgB" simulationType="reactions" compartment="Compartment_1">
+      <Metabolite key="Metabolite_25" name="GlgB" simulationType="fixed" compartment="Compartment_1">
         <MiriamAnnotation>
-<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:RDF
+   xmlns:dcterms="http://purl.org/dc/terms/"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
   <rdf:Description rdf:about="#Metabolite_25">
     <dcterms:created>
       <rdf:Description>
@@ -282,6 +280,7 @@
     </dcterms:created>
   </rdf:Description>
 </rdf:RDF>
+
         </MiriamAnnotation>
       </Metabolite>
       <Metabolite key="Metabolite_27" name="PPi" simulationType="fixed" compartment="Compartment_1">
@@ -301,7 +300,9 @@
     <ListOfReactions>
       <Reaction key="Reaction_0" name="Phosphoglucomutase" reversible="true" fast="false">
         <MiriamAnnotation>
-<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:RDF
+   xmlns:dcterms="http://purl.org/dc/terms/"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
   <rdf:Description rdf:about="#Reaction_0">
     <dcterms:created>
       <rdf:Description>
@@ -310,6 +311,7 @@
     </dcterms:created>
   </rdf:Description>
 </rdf:RDF>
+
         </MiriamAnnotation>
         <ListOfSubstrates>
           <Substrate metabolite="Metabolite_1" stoichiometry="1"/>
@@ -423,14 +425,14 @@ ADP-α-D-glucose + (1,4-α-D-glucosyl)(n) ⇄ ADP + (1,4-α-D-glucosyl)(n+1)
           <Modifier metabolite="Metabolite_17" stoichiometry="1"/>
         </ListOfModifiers>
         <ListOfConstants>
-          <Constant key="Parameter_4692" name="Vmax" value="0.1"/>
-          <Constant key="Parameter_4693" name="KmB" value="0.00032"/>
-          <Constant key="Parameter_4694" name="kmA" value="4e-05"/>
+          <Constant key="Parameter_4694" name="Vmax" value="0.1"/>
+          <Constant key="Parameter_4693" name="KmB" value="2e-07"/>
+          <Constant key="Parameter_4692" name="KmA" value="1e-05"/>
         </ListOfConstants>
         <KineticLaw function="Function_40">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_302">
-              <SourceParameter reference="Parameter_4692"/>
+              <SourceParameter reference="Parameter_4694"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_298">
               <SourceParameter reference="Metabolite_3"/>
@@ -441,13 +443,13 @@ ADP-α-D-glucose + (1,4-α-D-glucosyl)(n) ⇄ ADP + (1,4-α-D-glucosyl)(n+1)
             <CallParameter functionParameter="FunctionParameter_304">
               <SourceParameter reference="Parameter_4693"/>
             </CallParameter>
-            <CallParameter functionParameter="FunctionParameter_306">
-              <SourceParameter reference="Parameter_4694"/>
+            <CallParameter functionParameter="FunctionParameter_283">
+              <SourceParameter reference="Parameter_4692"/>
             </CallParameter>
           </ListOfCallParameters>
         </KineticLaw>
       </Reaction>
-      <Reaction key="Reaction_3" name="GlgB" reversible="true" fast="false">
+      <Reaction key="Reaction_3" name="GlgB" reversible="false" fast="false">
         <MiriamAnnotation>
 <rdf:RDF
    xmlns:dcterms="http://purl.org/dc/terms/"
@@ -476,30 +478,19 @@ a 1,4-α-D-glucan ⇄ a glycogen
           <Modifier metabolite="Metabolite_25" stoichiometry="1"/>
         </ListOfModifiers>
         <ListOfConstants>
-          <Constant key="Parameter_4670" name="Kms" value="1e-05"/>
-          <Constant key="Parameter_4669" name="Kmp" value="2e-07"/>
-          <Constant key="Parameter_4668" name="Vf" value="0.1"/>
-          <Constant key="Parameter_4667" name="Vr" value="0.1"/>
+          <Constant key="Parameter_4129" name="Km" value="1.42e-05"/>
+          <Constant key="Parameter_4128" name="V" value="0.1"/>
         </ListOfConstants>
-        <KineticLaw function="Function_28">
+        <KineticLaw function="Function_8">
           <ListOfCallParameters>
-            <CallParameter functionParameter="FunctionParameter_181">
+            <CallParameter functionParameter="FunctionParameter_41">
               <SourceParameter reference="Metabolite_13"/>
             </CallParameter>
-            <CallParameter functionParameter="FunctionParameter_210">
-              <SourceParameter reference="Metabolite_23"/>
+            <CallParameter functionParameter="FunctionParameter_30">
+              <SourceParameter reference="Parameter_4129"/>
             </CallParameter>
-            <CallParameter functionParameter="FunctionParameter_198">
-              <SourceParameter reference="Parameter_4670"/>
-            </CallParameter>
-            <CallParameter functionParameter="FunctionParameter_212">
-              <SourceParameter reference="Parameter_4669"/>
-            </CallParameter>
-            <CallParameter functionParameter="FunctionParameter_188">
-              <SourceParameter reference="Parameter_4668"/>
-            </CallParameter>
-            <CallParameter functionParameter="FunctionParameter_206">
-              <SourceParameter reference="Parameter_4667"/>
+            <CallParameter functionParameter="FunctionParameter_45">
+              <SourceParameter reference="Parameter_4128"/>
             </CallParameter>
           </ListOfCallParameters>
         </KineticLaw>
@@ -530,7 +521,7 @@ a 1,4-α-D-glucan ⇄ a glycogen
         </ListOfModifiers>
         <ListOfConstants>
           <Constant key="Parameter_4666" name="Km" value="1e-06"/>
-          <Constant key="Parameter_4665" name="V" value="0.001"/>
+          <Constant key="Parameter_4665" name="V" value="0.09"/>
         </ListOfConstants>
         <KineticLaw function="Function_8">
           <ListOfCallParameters>
@@ -556,19 +547,18 @@ a 1,4-α-D-glucan ⇄ a glycogen
           <ModelParameter cn="CN=Root,Model=New Model,Vector=Compartments[cytoplasm]" value="1" type="Compartment" simulationType="fixed"/>
         </ModelParameterGroup>
         <ModelParameterGroup cn="String=Initial Species Values" type="Group">
-          <ModelParameter cn="CN=Root,Model=New Model,Vector=Compartments[cytoplasm],Vector=Metabolites[G6P]" value="186182729810972.3" type="Species" simulationType="reactions"/>
-          <ModelParameter cn="CN=Root,Model=New Model,Vector=Compartments[cytoplasm],Vector=Metabolites[G1P]" value="359525271359118.8" type="Species" simulationType="reactions"/>
+          <ModelParameter cn="CN=Root,Model=New Model,Vector=Compartments[cytoplasm],Vector=Metabolites[G6P]" value="6.02214179e+21" type="Species" simulationType="reactions"/>
+          <ModelParameter cn="CN=Root,Model=New Model,Vector=Compartments[cytoplasm],Vector=Metabolites[G1P]" value="0" type="Species" simulationType="reactions"/>
           <ModelParameter cn="CN=Root,Model=New Model,Vector=Compartments[cytoplasm],Vector=Metabolites[Phosphoglucomutase]" value="6022141790000001" type="Species" simulationType="fixed"/>
-          <ModelParameter cn="CN=Root,Model=New Model,Vector=Compartments[cytoplasm],Vector=Metabolites[ADPG]" value="212901765698365.1" type="Species" simulationType="reactions"/>
+          <ModelParameter cn="CN=Root,Model=New Model,Vector=Compartments[cytoplasm],Vector=Metabolites[ADPG]" value="0" type="Species" simulationType="reactions"/>
           <ModelParameter cn="CN=Root,Model=New Model,Vector=Compartments[cytoplasm],Vector=Metabolites[GlgA]" value="6022141790000001" type="Species" simulationType="fixed"/>
           <ModelParameter cn="CN=Root,Model=New Model,Vector=Compartments[cytoplasm],Vector=Metabolites[ATP]" value="6022141790000001" type="Species" simulationType="fixed"/>
-          <ModelParameter cn="CN=Root,Model=New Model,Vector=Compartments[cytoplasm],Vector=Metabolites[1\,4glucan]" value="2.95317617672629e+21" type="Species" simulationType="reactions"/>
+          <ModelParameter cn="CN=Root,Model=New Model,Vector=Compartments[cytoplasm],Vector=Metabolites[1\,4glucan]" value="0" type="Species" simulationType="reactions"/>
           <ModelParameter cn="CN=Root,Model=New Model,Vector=Compartments[cytoplasm],Vector=Metabolites[GlgX]" value="6022141790000001" type="Species" simulationType="fixed"/>
           <ModelParameter cn="CN=Root,Model=New Model,Vector=Compartments[cytoplasm],Vector=Metabolites[GlgC]" value="6022141790000001" type="Species" simulationType="fixed"/>
-          <ModelParameter cn="CN=Root,Model=New Model,Vector=Compartments[cytoplasm],Vector=Metabolites[AMP]" value="6022141790000001" type="Species" simulationType="fixed"/>
           <ModelParameter cn="CN=Root,Model=New Model,Vector=Compartments[cytoplasm],Vector=Metabolites[ADP]" value="6022141790000001" type="Species" simulationType="fixed"/>
-          <ModelParameter cn="CN=Root,Model=New Model,Vector=Compartments[cytoplasm],Vector=Metabolites[Glycogen]" value="5.789395966394061e+19" type="Species" simulationType="reactions"/>
-          <ModelParameter cn="CN=Root,Model=New Model,Vector=Compartments[cytoplasm],Vector=Metabolites[GlgB]" value="6022141790000001" type="Species" simulationType="reactions"/>
+          <ModelParameter cn="CN=Root,Model=New Model,Vector=Compartments[cytoplasm],Vector=Metabolites[Glycogen]" value="0" type="Species" simulationType="reactions"/>
+          <ModelParameter cn="CN=Root,Model=New Model,Vector=Compartments[cytoplasm],Vector=Metabolites[GlgB]" value="6022141790000001" type="Species" simulationType="fixed"/>
           <ModelParameter cn="CN=Root,Model=New Model,Vector=Compartments[cytoplasm],Vector=Metabolites[PPi]" value="6022141790000001" type="Species" simulationType="fixed"/>
         </ModelParameterGroup>
         <ModelParameterGroup cn="String=Initial Global Quantities" type="Group">
@@ -586,18 +576,16 @@ a 1,4-α-D-glucan ⇄ a glycogen
           </ModelParameterGroup>
           <ModelParameterGroup cn="CN=Root,Model=New Model,Vector=Reactions[GlgC]" type="Reaction">
             <ModelParameter cn="CN=Root,Model=New Model,Vector=Reactions[GlgC],ParameterGroup=Parameters,Parameter=Vmax" value="0.1" type="ReactionParameter" simulationType="fixed"/>
-            <ModelParameter cn="CN=Root,Model=New Model,Vector=Reactions[GlgC],ParameterGroup=Parameters,Parameter=KmB" value="0.00032" type="ReactionParameter" simulationType="fixed"/>
-            <ModelParameter cn="CN=Root,Model=New Model,Vector=Reactions[GlgC],ParameterGroup=Parameters,Parameter=kmA" value="4e-05" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=New Model,Vector=Reactions[GlgC],ParameterGroup=Parameters,Parameter=KmB" value="2e-07" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=New Model,Vector=Reactions[GlgC],ParameterGroup=Parameters,Parameter=KmA" value="1e-05" type="ReactionParameter" simulationType="fixed"/>
           </ModelParameterGroup>
           <ModelParameterGroup cn="CN=Root,Model=New Model,Vector=Reactions[GlgB]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=New Model,Vector=Reactions[GlgB],ParameterGroup=Parameters,Parameter=Kms" value="1e-05" type="ReactionParameter" simulationType="fixed"/>
-            <ModelParameter cn="CN=Root,Model=New Model,Vector=Reactions[GlgB],ParameterGroup=Parameters,Parameter=Kmp" value="2e-07" type="ReactionParameter" simulationType="fixed"/>
-            <ModelParameter cn="CN=Root,Model=New Model,Vector=Reactions[GlgB],ParameterGroup=Parameters,Parameter=Vf" value="0.1" type="ReactionParameter" simulationType="fixed"/>
-            <ModelParameter cn="CN=Root,Model=New Model,Vector=Reactions[GlgB],ParameterGroup=Parameters,Parameter=Vr" value="0.1" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=New Model,Vector=Reactions[GlgB],ParameterGroup=Parameters,Parameter=Km" value="1.42e-05" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=New Model,Vector=Reactions[GlgB],ParameterGroup=Parameters,Parameter=V" value="0.1" type="ReactionParameter" simulationType="fixed"/>
           </ModelParameterGroup>
           <ModelParameterGroup cn="CN=Root,Model=New Model,Vector=Reactions[GlgX]" type="Reaction">
             <ModelParameter cn="CN=Root,Model=New Model,Vector=Reactions[GlgX],ParameterGroup=Parameters,Parameter=Km" value="1e-06" type="ReactionParameter" simulationType="fixed"/>
-            <ModelParameter cn="CN=Root,Model=New Model,Vector=Reactions[GlgX],ParameterGroup=Parameters,Parameter=V" value="0.001" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=New Model,Vector=Reactions[GlgX],ParameterGroup=Parameters,Parameter=V" value="0.09" type="ReactionParameter" simulationType="fixed"/>
           </ModelParameterGroup>
         </ModelParameterGroup>
       </ModelParameterSet>
@@ -614,14 +602,13 @@ a 1,4-α-D-glucan ⇄ a glycogen
       <StateTemplateVariable objectReference="Metabolite_11"/>
       <StateTemplateVariable objectReference="Metabolite_15"/>
       <StateTemplateVariable objectReference="Metabolite_17"/>
-      <StateTemplateVariable objectReference="Metabolite_19"/>
       <StateTemplateVariable objectReference="Metabolite_21"/>
-      <StateTemplateVariable objectReference="Metabolite_27"/>
       <StateTemplateVariable objectReference="Metabolite_25"/>
+      <StateTemplateVariable objectReference="Metabolite_27"/>
       <StateTemplateVariable objectReference="Compartment_1"/>
     </StateTemplate>
     <InitialState type="initialState">
-      0 359525271359118.8 2.95317617672629e+21 212901765698365.1 5.789395966394061e+19 186182729810972.3 6022141790000001 6022141790000001 6022141790000001 6022141790000001 6022141790000001 6022141790000001 6022141790000001 6022141790000001 6022141790000001 1 
+      0 0 0 0 0 6.02214179e+21 6022141790000001 6022141790000001 6022141790000001 6022141790000001 6022141790000001 6022141790000001 6022141790000001 6022141790000001 1 
     </InitialState>
   </Model>
   <ListOfTasks>
@@ -646,9 +633,9 @@ a 1,4-α-D-glucan ⇄ a glycogen
     <Task key="Task_15" name="Time-Course" type="timeCourse" scheduled="false" updateModel="true">
       <Report reference="Report_9" target="pilar.txt" append="1" confirmOverwrite="1"/>
       <Problem>
-        <Parameter name="StepNumber" type="unsignedInteger" value="100"/>
-        <Parameter name="StepSize" type="float" value="1000"/>
-        <Parameter name="Duration" type="float" value="100000"/>
+        <Parameter name="StepNumber" type="unsignedInteger" value="1000"/>
+        <Parameter name="StepSize" type="float" value="10"/>
+        <Parameter name="Duration" type="float" value="10000"/>
         <Parameter name="TimeSeriesRequested" type="bool" value="1"/>
         <Parameter name="OutputStartTime" type="float" value="0"/>
         <Parameter name="Output Event" type="bool" value="1"/>
@@ -671,31 +658,23 @@ a 1,4-α-D-glucan ⇄ a glycogen
             <Parameter name="Type" type="unsignedInteger" value="1"/>
             <Parameter name="Object" type="cn" value="CN=Root,Model=New Model,Vector=Compartments[cytoplasm],Vector=Metabolites[1\,4glucan],Reference=InitialConcentration"/>
             <Parameter name="Minimum" type="float" value="0"/>
-            <Parameter name="Maximum" type="float" value="0"/>
-            <Parameter name="log" type="bool" value="0"/>
-          </ParameterGroup>
-          <ParameterGroup name="ScanItem">
-            <Parameter name="Number of steps" type="unsignedInteger" value="10"/>
-            <Parameter name="Type" type="unsignedInteger" value="1"/>
-            <Parameter name="Object" type="cn" value="CN=Root,Model=New Model,Vector=Compartments[cytoplasm],Vector=Metabolites[ADPG],Reference=InitialConcentration"/>
-            <Parameter name="Minimum" type="float" value="0"/>
-            <Parameter name="Maximum" type="float" value="0"/>
-            <Parameter name="log" type="bool" value="0"/>
-          </ParameterGroup>
-          <ParameterGroup name="ScanItem">
-            <Parameter name="Number of steps" type="unsignedInteger" value="10"/>
-            <Parameter name="Type" type="unsignedInteger" value="1"/>
-            <Parameter name="Object" type="cn" value="CN=Root,Model=New Model,Vector=Compartments[cytoplasm],Vector=Metabolites[G1P],Reference=InitialConcentration"/>
-            <Parameter name="Minimum" type="float" value="0"/>
-            <Parameter name="Maximum" type="float" value="0"/>
+            <Parameter name="Maximum" type="float" value="5"/>
             <Parameter name="log" type="bool" value="0"/>
           </ParameterGroup>
           <ParameterGroup name="ScanItem">
             <Parameter name="Number of steps" type="unsignedInteger" value="10"/>
             <Parameter name="Type" type="unsignedInteger" value="1"/>
             <Parameter name="Object" type="cn" value="CN=Root,Model=New Model,Vector=Compartments[cytoplasm],Vector=Metabolites[GlgB],Reference=InitialConcentration"/>
-            <Parameter name="Minimum" type="float" value="1e-05"/>
-            <Parameter name="Maximum" type="float" value="0.0001"/>
+            <Parameter name="Minimum" type="float" value="5e-06"/>
+            <Parameter name="Maximum" type="float" value="0.0002"/>
+            <Parameter name="log" type="bool" value="0"/>
+          </ParameterGroup>
+          <ParameterGroup name="ScanItem">
+            <Parameter name="Number of steps" type="unsignedInteger" value="10"/>
+            <Parameter name="Type" type="unsignedInteger" value="1"/>
+            <Parameter name="Object" type="cn" value="CN=Root,Model=New Model,Vector=Compartments[cytoplasm],Vector=Metabolites[Glycogen],Reference=InitialConcentration"/>
+            <Parameter name="Minimum" type="float" value="0"/>
+            <Parameter name="Maximum" type="float" value="5"/>
             <Parameter name="log" type="bool" value="0"/>
           </ParameterGroup>
         </ParameterGroup>
@@ -1344,7 +1323,7 @@ a 1,4-α-D-glucan ⇄ a glycogen
             <Dimensions width="52" height="28"/>
           </BoundingBox>
         </MetaboliteGlyph>
-        <MetaboliteGlyph key="Layout_18" name="MetabGlyph" metabolite="Metabolite_19">
+        <MetaboliteGlyph key="Layout_18" name="MetabGlyph" metabolite="">
           <BoundingBox>
             <Position x="419.8195825345113" y="372.3593776395628"/>
             <Dimensions width="52" height="28"/>
@@ -1684,7 +1663,7 @@ a 1,4-α-D-glucan ⇄ a glycogen
             <Dimensions width="48" height="24"/>
           </BoundingBox>
         </TextGlyph>
-        <TextGlyph key="Layout_53" name="TextGlyph" graphicalObject="Layout_18" originOfText="Metabolite_19">
+        <TextGlyph key="Layout_53" name="TextGlyph" graphicalObject="Layout_18" text="unset">
           <BoundingBox>
             <Position x="419.8195825345113" y="372.3593776395628"/>
             <Dimensions width="48" height="24"/>
