@@ -35,7 +35,7 @@ All the reactions of the pathway are highly efficient, as all the initial glucos
 We run our model for 2500 seconds and collect the data in intevals of 0.05 seconds starting with a concentration of 10 mmol/mL of Glucose-6-P (G6P). After the time course, the majority of the starting glucose has been used to produce glycogen and only a small part of the glucose stays unbranched.
 
 
-![](basal_model.png)
+![](final_model.png)
 
 
 
