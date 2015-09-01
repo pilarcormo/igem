@@ -1,4 +1,8 @@
-##Assumptions:
+
+Kinetic modelling
+===
+
+####Assumptions:
 
 We generated a deterministic model taking into consideration the following assumptions:
 
@@ -29,9 +33,15 @@ GlgB(Glucan1-4)| 1.42x10-5| [(4)](http://www.ncbi.nlm.nih.gov/pubmed/11368019)
 GlgX (Glycogen)| 1x10-6| -not found-
 GlgP (Glycogen)| 1x10-6| -not found-
 
-**Pathway from (5)**
+\newpage
+
+\begin{center}	
+Glycogen Pathway (5)
+\end{center}
 ![](pathway.png) 
 
+	
+ 
 GlgB catalyzes 2 consecutive reactions. First, it cleaves an alpha 1,4 glycosidic linkage in a 1,4-alpha-D-glucan to form a non-reducing-end oligosaccharide chain that is transferred to a C-6 hydroxyl group of the same or another alpha-1,4-D-glucan.(Preiss, J. 2009. Glycogen Biosynthesis.)
 GlgX and GlgP were considered together as the action of both enzymes is required to get debranching of glycogen. 
 
@@ -44,6 +54,37 @@ We run our model for 2500 seconds and collect the data in intevals of 0.05 secon
 
 ![](final_model.png)
 
+Differential equations
+===
+
+$$
+\begin{array}{ccl}
+\frac {\mathrm{d}\left( {{\mathrm{[G6P]}} \,  } \right) }  {\mathrm{d}{t} }  \; &=& \;  { \, - \,  \, \left(\frac {\frac {{\mathrm{Vf}}_{\mathrm{(Pgm)}} \, \cdot \, {\mathrm{[G6P]}} } {{\mathrm{Kms}}_{\mathrm{(Pgm)}} } \, - \, \frac {{\mathrm{Vr}}_{\mathrm{(Pgm)}} \, \cdot \, {\mathrm{[G1P]}} } {{\mathrm{Kmp}}_{\mathrm{(Pgm)}} } }  { {{1} \, + \, \frac{\mathrm{[G6P]}}{{\mathrm{Kms}}_{\mathrm{(Pgm)}} } }  \, + \, \frac{\mathrm{[G1P]}}{{\mathrm{Kmp}}_{\mathrm{(Pgm)}} } } \right) } \\ 
+ && \\ 
+\frac {\mathrm{d}\left( {{\mathrm{[G1P]}} \,  } \right) }  {\mathrm{d}{t} }  \; &=& \;  { \, + \,  \,  \left(\frac {\frac {{\mathrm{Vf}}_{\mathrm{(Pgm)}} \, \cdot \, {\mathrm{[G6P]}} } {{\mathrm{Kms}}_{\mathrm{(Pgm)}} } \, - \, \frac {{\mathrm{Vr}}_{\mathrm{(Pgm)}} \, \cdot \, {\mathrm{[G1P]}} } {{\mathrm{Kmp}}_{\mathrm{(Pgm)}} } }  { {{1} \, + \, \frac{\mathrm{[G6P]}}{{\mathrm{Kms}}_{\mathrm{(Pgm)}} } }  \, + \, \frac{\mathrm{[G1P]}}{{\mathrm{Kmp}}_{\mathrm{(Pgm)}} } } \right) } \\ 
+ && \\ 
+ \; && \;  { \, - \,  \, \left(\frac { {{\mathrm{Vmax}}_{\mathrm{(GlgC)}} \, \cdot \, {\mathrm{[G1P]}} }  \, \cdot \, {\mathrm{[ATP]}} }  { { { {{\mathrm{KmB}}_{\mathrm{(GlgC)}} \, \cdot \, {\mathrm{KmA}}_{\mathrm{(GlgC)}} }  \, + \,  {{\mathrm{KmB}}_{\mathrm{(GlgC)}} \, \cdot \, {\mathrm{[G1P]}} }  }  \, + \,  {{\mathrm{KmA}}_{\mathrm{(GlgC)}} \, \cdot \, {\mathrm{[ATP]}} }  }  \, + \,  {{\mathrm{[G1P]}} \, \cdot \, {\mathrm{[ATP]}} }  } \right) } \\ 
+ && \\ 
+ \; && \;  { \, + \,  \,  \left(\frac {{V}_{\mathrm{("GlgX-GlgP")}} \,  {\mathrm{[Glycogen]}} }  {{\mathrm{Km}}_{\mathrm{("GlgX-GlgP")}} \, + \, {\mathrm{[Glycogen]}} } \right) } \\ 
+ && \\ 
+ \; && \;  { \, + \,  \,  \left(\frac {{V}_{\mathrm{(AspP)}} \, \cdot \, {\mathrm{[ADPG]}} }  {{\mathrm{Km}}_{\mathrm{(AspP)}} \, + \, {\mathrm{[ADPG]}} } \right) } \\ 
+ && \\ 
+\frac {\mathrm{d}\left( {{\mathrm{[ADPG]}} \,   } \right) }  {\mathrm{d}{t} }  \; &=& \;  { \, - \,  \,  \left(\frac {{V}_{\mathrm{(GlgA)}} \, \cdot \, {\mathrm{[ADPG]}} }  {{\mathrm{Km}}_{\mathrm{(GlgA)}} \, + \, {\mathrm{[ADPG]}} } \right) } \\ 
+ && \\ 
+ \; && \;  { \, + \,  \,  \left(\frac { {{\mathrm{Vmax}}_{\mathrm{(GlgC)}} \, \cdot \, {\mathrm{[G1P]}} }  \, \cdot \, {\mathrm{[ATP]}} }  { { { {{\mathrm{KmB}}_{\mathrm{(GlgC)}} \, \cdot \, {\mathrm{KmA}}_{\mathrm{(GlgC)}} }  \, + \,  {{\mathrm{KmB}}_{\mathrm{(GlgC)}} \, \cdot \, {\mathrm{[G1P]}} }  }  \, + \,  {{\mathrm{KmA}}_{\mathrm{(GlgC)}} \, \cdot \, {\mathrm{[ATP]}} }  }  \, + \,  {{\mathrm{[G1P]}} \, \cdot \, {\mathrm{[ATP]}} }  } \right) } \\ 
+ && \\ 
+ \; && \;  { \, - \,  \,  \left(\frac {{V}_{\mathrm{(AspP)}} \, \cdot \, {\mathrm{[ADPG]}} }  {{\mathrm{Km}}_{\mathrm{(AspP)}} \, + \, {\mathrm{[ADPG]}} } \right) } \\ 
+ && \\ 
+\frac {\mathrm{d}\left( {{\mathrm{[1,4glucan]}} \,  } \right) }  {\mathrm{d}{t} }  \; &=& \;  { \, + \,  \,  \left(\frac {{V}_{\mathrm{(GlgA)}} \, \cdot \, {\mathrm{[ADPG]}} }  {{\mathrm{Km}}_{\mathrm{(GlgA)}} \, + \, {\mathrm{[ADPG]}} } \right) } \\ 
+ && \\ 
+ \; && \;  { \, - \,  \,  \left(\frac {{V}_{\mathrm{(GlgB)}} \, \cdot \, {\mathrm{[1,4glucan]}} }  {{\mathrm{Km}}_{\mathrm{(GlgB)}} \, + \, {\mathrm{[1,4glucan]}} } \right) } \\ 
+ && \\ 
+\frac {\mathrm{d}\left( {{\mathrm{[Glycogen]}} \,  } \right) }  {\mathrm{d}{t} }  \; &=& \;  { \, + \,  \, \left(\frac {{V}_{\mathrm{(GlgB)}} \, \cdot \, {\mathrm{[1,4glucan]}} }  {{\mathrm{Km}}_{\mathrm{(GlgB)}} \, + \, {\mathrm{[1,4glucan]}} } \right) } \\ 
+ && \\ 
+ \; && \;  { \, - \,  \, \left(\frac {{V}_{\mathrm{("GlgX-GlgP")}} \,\cdot \, {\mathrm{[Glycogen]}} }  {{\mathrm{Km}}_{\mathrm{("GlgX-GlgP")}} \, + \, {\mathrm{[Glycogen]}} } \right) } \\ 
+ && \\ 
+\end{array}
+$$
 
 
 ##References
