@@ -14,6 +14,7 @@ The software we developed uses these properties to predict the structure of the 
 The software was created in C++ using openGL. The individual glucose molecules are represented by black squares and they are used as building blocks for the chains and branches.
 
 To create the glycogen structures we made the following assumptions: 
+
 1. The branching points on the chain are always the 5th and 9th glucose molecule on the chain.
 2.  All chains are equal in length 
 3. The branching degree is two on each chain, except on the final tier.
