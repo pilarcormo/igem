@@ -1,7 +1,7 @@
 ##Background
 
 
-We used glycogen as a model system to gain a better understanding of the parameters involved in carbohydrate branching and debranching. Due to the structural properties of starch and the complicated pathway to produce it in plants, it is a molecule difficult to model.  Glycogen is the starch analogue in bacteria. ADP-glucose is the glucosyl donor for the elongation of the alpha-1,4-glucosidic chain in both bacteria and plants. Also, the main metabolic regulations occurs at the level of ADP-glucose synthesis in both organisms (1). Glycogen is characterized by a uniform and constant chemical structure and a well-described enzymatic pathway. Therefore, it is the perfect model molecule to test the effect of the  branching and debranching enzymes. 
+We used glycogen as a model system to gain a better understanding of the parameters involved in carbohydrate branching and debranching. Due to the structural properties of starch and the complicated pathway to produce it in plants, it is a molecule difficult to model.  Glycogen is the starch analogue in bacteria. Both bacteria and plants, ADP-glucose is the glucosyl donor for the elongation of the alpha-1,4-glucosidic chain. Also, the main metabolic regulations occurs at the level of ADP-glucose synthesis in both organisms (1). Glycogen is characterized by a uniform and constant chemical structure and a well-described enzymatic pathway. Therefore, it is the perfect model molecule to test the effect of the  branching and debranching enzymes. 
 
 ----SOFTWARE--------
 
@@ -24,9 +24,11 @@ The software creates a pool of glucose units which are used to build the structu
 
 To make it easier to visualise, the software does not allow for chains to cross paths on the same plane, which does reduce the number of valid tiers compared to a three dimensional model. If there is more than one possible valid chain then the software will randomly select which valid chain to build.
 
-The main aim of the project was to add acyl groups (as butyrate) to digestible starch. As a proof-of-concept, we try to modify glycogen. However, we don't know the position in the glucose molecule where the acyl group is putatively added. If the group is added to the free end available at a growing branch, it might disrupt the branch growth. If the chain elongation or the branching is disrupted, the final molecule will be smaller and, even if the molecule is viable, the glucose units that will undergo fermentation in the gut are less in number. Therefore, the growth disruption caused by the addition of acyl groups needs to be minimum. 
+----GLYCOGEN MODIFICATION--------
 
-We plan to have a final 5-10% of modified ends in a viable glycogen molecule since that percentage of butyrylation in starch has been shown to have beneficial health effects in the colon (2). To predict the effects of the modification in the global glycogen structure, we used Glyco2D. it will generate 2D structures of glycogen with and without modifications. The chance of modification can be given to the software as a parameter. 
+The main aim of the project was to add acyl groups (as butyrate) to digestible starch. As a proof-of-concept, we tried to modify glycogen. However, we don't know the position in the glucose molecule where the acyl group is putatively added. If the group is added to the free end available at a growing branch, it might disrupt the branch growth as suggested by Blennow A. et al for starch phosphorylation (4). If the chain elongation or the branching is disrupted, the final molecule will be smaller and, even if the molecule is viable, the glucose units that will undergo fermentation in the gut are less in number. Therefore, the growth disruption caused by the addition of acyl groups needs to be minimum. 
+
+We plan to have a final 5-10% of modified ends in a viable glycogen molecule since that percentage of butyrylation in starch has been shown to have beneficial health effects in the colon (2). To predict the effects of the modification in the global glycogen structure, we used Glyco2D. it generates 2D structures of glycogen with and without modifications. The chance of modification can be given to the software as a parameter. 
 
 The software creates three predictions. The first prediction on the left is the unmodified structure of the molecule. The second prediction is the structure where there is a given chance for glucose molecules to be acylated but it will not restrict the growth/branching of the molecule. The glucose molecules with an added acyl group are coloured red. The final model represents a restricted growth molecule. In this case, the addition of the acyl group disrupt the molecule growth. The glucose molecules that have the acyl group added which are restricting the growth are coloured in red. 
 This restricted model can help us to identify the modification limit to get stable acylated glycogen molecules.
@@ -37,7 +39,7 @@ This restricted model can help us to identify the modification limit to get stab
 2. Bajka BH, Clarke JM, Topping DL, Cobiac L, Abeywardena MY, Patten GS: Butyrylated starch increases large bowel butyrate levels and lowers colonic smooth muscle contractility in rats. Nutr Res 2010, 30:427–34
 
 3. Meléndez-Hevia E, Waddell TG, Shelton ED: Optimization of molecular design in the evolution of metabolism: The glycogen molecule. Biochem J 1993, 295 ( Pt 2):477–83.
-
+4. Blennow A, Nielsen TH, Baunsgaard L, Mikkelsen R, Engelsen SB: Starch phosphorylation: A new front line in starch research. Trends Plant Sci 2002, 7:445–50.
 
 
 
