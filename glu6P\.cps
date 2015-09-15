@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- generated with COPASI 4.15 (Build 95) (http://www.copasi.org) at 2015-08-25 16:15:53 UTC -->
+<!-- generated with COPASI 4.15 (Build 95) (http://www.copasi.org) at 2015-09-09 15:11:11 UTC -->
 <?oxygen RNGSchema="http://www.copasi.org/static/schema/CopasiML.rng" type="xml"?>
 <COPASI xmlns="http://www.copasi.org/static/schema" versionMajor="4" versionMinor="15" versionDevel="95" copasiSourcesModified="0">
   <ListOfFunctions>
@@ -50,9 +50,7 @@
     </Function>
     <Function key="Function_40" name="2 substrates (irreversible)" type="UserDefined" reversible="unspecified">
       <MiriamAnnotation>
-<rdf:RDF
-   xmlns:dcterms="http://purl.org/dc/terms/"
-   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
   <rdf:Description rdf:about="#Function_40">
     <dcterms:created>
       <rdf:Description>
@@ -61,17 +59,16 @@
     </dcterms:created>
   </rdf:Description>
 </rdf:RDF>
-
       </MiriamAnnotation>
       <Expression>
         Vmax*substrateA*substrateB/(KmB*KmA + KmB*substrateA + KmA*substrateB + substrateA*substrateB)
       </Expression>
       <ListOfParameterDescriptions>
-        <ParameterDescription key="FunctionParameter_302" name="Vmax" order="0" role="constant"/>
-        <ParameterDescription key="FunctionParameter_298" name="substrateA" order="1" role="substrate"/>
-        <ParameterDescription key="FunctionParameter_295" name="substrateB" order="2" role="substrate"/>
-        <ParameterDescription key="FunctionParameter_304" name="KmB" order="3" role="constant"/>
-        <ParameterDescription key="FunctionParameter_283" name="KmA" order="4" role="constant"/>
+        <ParameterDescription key="FunctionParameter_264" name="Vmax" order="0" role="constant"/>
+        <ParameterDescription key="FunctionParameter_254" name="substrateA" order="1" role="substrate"/>
+        <ParameterDescription key="FunctionParameter_258" name="substrateB" order="2" role="substrate"/>
+        <ParameterDescription key="FunctionParameter_266" name="KmB" order="3" role="constant"/>
+        <ParameterDescription key="FunctionParameter_268" name="KmA" order="4" role="constant"/>
       </ListOfParameterDescriptions>
     </Function>
   </ListOfFunctions>
@@ -106,7 +103,7 @@
       </Compartment>
     </ListOfCompartments>
     <ListOfMetabolites>
-      <Metabolite key="Metabolite_1" name="G6P" simulationType="reactions" compartment="Compartment_1">
+      <Metabolite key="Metabolite_1" name="G6P" simulationType="fixed" compartment="Compartment_1">
         <MiriamAnnotation>
 <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
   <rdf:Description rdf:about="#Metabolite_1">
@@ -121,9 +118,7 @@
       </Metabolite>
       <Metabolite key="Metabolite_3" name="G1P" simulationType="reactions" compartment="Compartment_1">
         <MiriamAnnotation>
-<rdf:RDF
-   xmlns:dcterms="http://purl.org/dc/terms/"
-   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
   <rdf:Description rdf:about="#Metabolite_3">
     <dcterms:created>
       <rdf:Description>
@@ -132,10 +127,9 @@
     </dcterms:created>
   </rdf:Description>
 </rdf:RDF>
-
         </MiriamAnnotation>
       </Metabolite>
-      <Metabolite key="Metabolite_5" name="Phosphoglucomutase" simulationType="fixed" compartment="Compartment_1">
+      <Metabolite key="Metabolite_5" name="Pgm" simulationType="fixed" compartment="Compartment_1">
         <MiriamAnnotation>
 <rdf:RDF
    xmlns:dcterms="http://purl.org/dc/terms/"
@@ -166,7 +160,9 @@
       </Metabolite>
       <Metabolite key="Metabolite_9" name="GlgA" simulationType="fixed" compartment="Compartment_1">
         <MiriamAnnotation>
-<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:RDF
+   xmlns:dcterms="http://purl.org/dc/terms/"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
   <rdf:Description rdf:about="#Metabolite_9">
     <dcterms:created>
       <rdf:Description>
@@ -175,13 +171,12 @@
     </dcterms:created>
   </rdf:Description>
 </rdf:RDF>
+
         </MiriamAnnotation>
       </Metabolite>
       <Metabolite key="Metabolite_11" name="ATP" simulationType="fixed" compartment="Compartment_1">
         <MiriamAnnotation>
-<rdf:RDF
-   xmlns:dcterms="http://purl.org/dc/terms/"
-   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
   <rdf:Description rdf:about="#Metabolite_11">
     <dcterms:created>
       <rdf:Description>
@@ -190,7 +185,6 @@
     </dcterms:created>
   </rdf:Description>
 </rdf:RDF>
-
         </MiriamAnnotation>
       </Metabolite>
       <Metabolite key="Metabolite_13" name="1,4glucan" simulationType="reactions" compartment="Compartment_1">
@@ -224,9 +218,7 @@
       </Metabolite>
       <Metabolite key="Metabolite_17" name="GlgC" simulationType="fixed" compartment="Compartment_1">
         <MiriamAnnotation>
-<rdf:RDF
-   xmlns:dcterms="http://purl.org/dc/terms/"
-   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
   <rdf:Description rdf:about="#Metabolite_17">
     <dcterms:created>
       <rdf:Description>
@@ -235,13 +227,12 @@
     </dcterms:created>
   </rdf:Description>
 </rdf:RDF>
-
         </MiriamAnnotation>
       </Metabolite>
-      <Metabolite key="Metabolite_21" name="ADP" simulationType="fixed" compartment="Compartment_1">
+      <Metabolite key="Metabolite_19" name="ADP" simulationType="fixed" compartment="Compartment_1">
         <MiriamAnnotation>
 <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-  <rdf:Description rdf:about="#Metabolite_21">
+  <rdf:Description rdf:about="#Metabolite_19">
     <dcterms:created>
       <rdf:Description>
         <dcterms:W3CDTF>2015-07-31T13:59:54Z</dcterms:W3CDTF>
@@ -251,12 +242,10 @@
 </rdf:RDF>
         </MiriamAnnotation>
       </Metabolite>
-      <Metabolite key="Metabolite_23" name="Glycogen" simulationType="reactions" compartment="Compartment_1">
+      <Metabolite key="Metabolite_21" name="Glycogen" simulationType="reactions" compartment="Compartment_1">
         <MiriamAnnotation>
-<rdf:RDF
-   xmlns:dcterms="http://purl.org/dc/terms/"
-   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-  <rdf:Description rdf:about="#Metabolite_23">
+<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <rdf:Description rdf:about="#Metabolite_21">
     <dcterms:created>
       <rdf:Description>
         <dcterms:W3CDTF>2015-07-31T13:59:42Z</dcterms:W3CDTF>
@@ -264,15 +253,12 @@
     </dcterms:created>
   </rdf:Description>
 </rdf:RDF>
-
         </MiriamAnnotation>
       </Metabolite>
-      <Metabolite key="Metabolite_25" name="GlgB" simulationType="fixed" compartment="Compartment_1">
+      <Metabolite key="Metabolite_23" name="GlgB" simulationType="fixed" compartment="Compartment_1">
         <MiriamAnnotation>
-<rdf:RDF
-   xmlns:dcterms="http://purl.org/dc/terms/"
-   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-  <rdf:Description rdf:about="#Metabolite_25">
+<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <rdf:Description rdf:about="#Metabolite_23">
     <dcterms:created>
       <rdf:Description>
         <dcterms:W3CDTF>2015-08-03T10:54:08Z</dcterms:W3CDTF>
@@ -280,13 +266,12 @@
     </dcterms:created>
   </rdf:Description>
 </rdf:RDF>
-
         </MiriamAnnotation>
       </Metabolite>
-      <Metabolite key="Metabolite_27" name="PPi" simulationType="fixed" compartment="Compartment_1">
+      <Metabolite key="Metabolite_25" name="PPi" simulationType="fixed" compartment="Compartment_1">
         <MiriamAnnotation>
 <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-  <rdf:Description rdf:about="#Metabolite_27">
+  <rdf:Description rdf:about="#Metabolite_25">
     <dcterms:created>
       <rdf:Description>
         <dcterms:W3CDTF>2015-08-03T10:54:05Z</dcterms:W3CDTF>
@@ -295,6 +280,12 @@
   </rdf:Description>
 </rdf:RDF>
         </MiriamAnnotation>
+      </Metabolite>
+      <Metabolite key="Metabolite_27" name="AMP" simulationType="fixed" compartment="Compartment_1">
+      </Metabolite>
+      <Metabolite key="Metabolite_29" name="AspP" simulationType="fixed" compartment="Compartment_1">
+      </Metabolite>
+      <Metabolite key="Metabolite_31" name="GlgP" simulationType="fixed" compartment="Compartment_1">
       </Metabolite>
     </ListOfMetabolites>
     <ListOfReactions>
@@ -375,14 +366,14 @@ ADP-α-D-glucose + (1,4-α-D-glucosyl)(n) ⇄ ADP + (1,4-α-D-glucosyl)(n+1)
         </ListOfSubstrates>
         <ListOfProducts>
           <Product metabolite="Metabolite_13" stoichiometry="1"/>
-          <Product metabolite="Metabolite_21" stoichiometry="1"/>
+          <Product metabolite="Metabolite_19" stoichiometry="1"/>
         </ListOfProducts>
         <ListOfModifiers>
           <Modifier metabolite="Metabolite_9" stoichiometry="1"/>
         </ListOfModifiers>
         <ListOfConstants>
           <Constant key="Parameter_4675" name="Km" value="3.5e-05"/>
-          <Constant key="Parameter_4674" name="V" value="0.1"/>
+          <Constant key="Parameter_4674" name="V" value="0.01"/>
         </ListOfConstants>
         <KineticLaw function="Function_8">
           <ListOfCallParameters>
@@ -419,32 +410,32 @@ ADP-α-D-glucose + (1,4-α-D-glucosyl)(n) ⇄ ADP + (1,4-α-D-glucosyl)(n+1)
         </ListOfSubstrates>
         <ListOfProducts>
           <Product metabolite="Metabolite_7" stoichiometry="1"/>
-          <Product metabolite="Metabolite_27" stoichiometry="1"/>
+          <Product metabolite="Metabolite_25" stoichiometry="1"/>
         </ListOfProducts>
         <ListOfModifiers>
           <Modifier metabolite="Metabolite_17" stoichiometry="1"/>
         </ListOfModifiers>
         <ListOfConstants>
-          <Constant key="Parameter_4694" name="Vmax" value="0.1"/>
-          <Constant key="Parameter_4693" name="KmB" value="2e-07"/>
-          <Constant key="Parameter_4692" name="KmA" value="1e-05"/>
+          <Constant key="Parameter_4673" name="Vmax" value="0.01"/>
+          <Constant key="Parameter_4672" name="KmB" value="2e-07"/>
+          <Constant key="Parameter_4671" name="KmA" value="1e-05"/>
         </ListOfConstants>
         <KineticLaw function="Function_40">
           <ListOfCallParameters>
-            <CallParameter functionParameter="FunctionParameter_302">
-              <SourceParameter reference="Parameter_4694"/>
+            <CallParameter functionParameter="FunctionParameter_264">
+              <SourceParameter reference="Parameter_4673"/>
             </CallParameter>
-            <CallParameter functionParameter="FunctionParameter_298">
+            <CallParameter functionParameter="FunctionParameter_254">
               <SourceParameter reference="Metabolite_3"/>
             </CallParameter>
-            <CallParameter functionParameter="FunctionParameter_295">
+            <CallParameter functionParameter="FunctionParameter_258">
               <SourceParameter reference="Metabolite_11"/>
             </CallParameter>
-            <CallParameter functionParameter="FunctionParameter_304">
-              <SourceParameter reference="Parameter_4693"/>
+            <CallParameter functionParameter="FunctionParameter_266">
+              <SourceParameter reference="Parameter_4672"/>
             </CallParameter>
-            <CallParameter functionParameter="FunctionParameter_283">
-              <SourceParameter reference="Parameter_4692"/>
+            <CallParameter functionParameter="FunctionParameter_268">
+              <SourceParameter reference="Parameter_4671"/>
             </CallParameter>
           </ListOfCallParameters>
         </KineticLaw>
@@ -472,14 +463,14 @@ a 1,4-α-D-glucan ⇄ a glycogen
           <Substrate metabolite="Metabolite_13" stoichiometry="1"/>
         </ListOfSubstrates>
         <ListOfProducts>
-          <Product metabolite="Metabolite_23" stoichiometry="1"/>
+          <Product metabolite="Metabolite_21" stoichiometry="1"/>
         </ListOfProducts>
         <ListOfModifiers>
-          <Modifier metabolite="Metabolite_25" stoichiometry="1"/>
+          <Modifier metabolite="Metabolite_23" stoichiometry="1"/>
         </ListOfModifiers>
         <ListOfConstants>
-          <Constant key="Parameter_4129" name="Km" value="1.42e-05"/>
-          <Constant key="Parameter_4128" name="V" value="0.1"/>
+          <Constant key="Parameter_4670" name="Km" value="1.42e-05"/>
+          <Constant key="Parameter_4669" name="V" value="0.01"/>
         </ListOfConstants>
         <KineticLaw function="Function_8">
           <ListOfCallParameters>
@@ -487,15 +478,15 @@ a 1,4-α-D-glucan ⇄ a glycogen
               <SourceParameter reference="Metabolite_13"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_30">
-              <SourceParameter reference="Parameter_4129"/>
+              <SourceParameter reference="Parameter_4670"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_45">
-              <SourceParameter reference="Parameter_4128"/>
+              <SourceParameter reference="Parameter_4669"/>
             </CallParameter>
           </ListOfCallParameters>
         </KineticLaw>
       </Reaction>
-      <Reaction key="Reaction_4" name="GlgX" reversible="false" fast="false">
+      <Reaction key="Reaction_4" name="GlgX-GlgP" reversible="false" fast="false">
         <MiriamAnnotation>
 <rdf:RDF
    xmlns:dcterms="http://purl.org/dc/terms/"
@@ -511,22 +502,63 @@ a 1,4-α-D-glucan ⇄ a glycogen
 
         </MiriamAnnotation>
         <ListOfSubstrates>
-          <Substrate metabolite="Metabolite_23" stoichiometry="1"/>
+          <Substrate metabolite="Metabolite_21" stoichiometry="1"/>
         </ListOfSubstrates>
         <ListOfProducts>
           <Product metabolite="Metabolite_3" stoichiometry="1"/>
         </ListOfProducts>
         <ListOfModifiers>
           <Modifier metabolite="Metabolite_15" stoichiometry="1"/>
+          <Modifier metabolite="Metabolite_31" stoichiometry="1"/>
         </ListOfModifiers>
         <ListOfConstants>
-          <Constant key="Parameter_4666" name="Km" value="1e-06"/>
-          <Constant key="Parameter_4665" name="V" value="0.09"/>
+          <Constant key="Parameter_4668" name="Km" value="1e-07"/>
+          <Constant key="Parameter_4667" name="V" value="0.002"/>
         </ListOfConstants>
         <KineticLaw function="Function_8">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_41">
-              <SourceParameter reference="Metabolite_23"/>
+              <SourceParameter reference="Metabolite_21"/>
+            </CallParameter>
+            <CallParameter functionParameter="FunctionParameter_30">
+              <SourceParameter reference="Parameter_4668"/>
+            </CallParameter>
+            <CallParameter functionParameter="FunctionParameter_45">
+              <SourceParameter reference="Parameter_4667"/>
+            </CallParameter>
+          </ListOfCallParameters>
+        </KineticLaw>
+      </Reaction>
+      <Reaction key="Reaction_5" name="AspP" reversible="false" fast="false">
+        <MiriamAnnotation>
+<rdf:RDF
+   xmlns:dcterms="http://purl.org/dc/terms/"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <rdf:Description rdf:about="#Reaction_5">
+    <dcterms:created>
+      <rdf:Description>
+        <dcterms:W3CDTF>2015-09-01T10:11:27Z</dcterms:W3CDTF>
+      </rdf:Description>
+    </dcterms:created>
+  </rdf:Description>
+</rdf:RDF>
+
+        </MiriamAnnotation>
+        <ListOfSubstrates>
+          <Substrate metabolite="Metabolite_7" stoichiometry="1"/>
+        </ListOfSubstrates>
+        <ListOfProducts>
+          <Product metabolite="Metabolite_3" stoichiometry="1"/>
+          <Product metabolite="Metabolite_27" stoichiometry="1"/>
+        </ListOfProducts>
+        <ListOfConstants>
+          <Constant key="Parameter_4666" name="Km" value="6e-05"/>
+          <Constant key="Parameter_4665" name="V" value="0.01"/>
+        </ListOfConstants>
+        <KineticLaw function="Function_8">
+          <ListOfCallParameters>
+            <CallParameter functionParameter="FunctionParameter_41">
+              <SourceParameter reference="Metabolite_7"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_30">
               <SourceParameter reference="Parameter_4666"/>
@@ -547,19 +579,22 @@ a 1,4-α-D-glucan ⇄ a glycogen
           <ModelParameter cn="CN=Root,Model=New Model,Vector=Compartments[cytoplasm]" value="1" type="Compartment" simulationType="fixed"/>
         </ModelParameterGroup>
         <ModelParameterGroup cn="String=Initial Species Values" type="Group">
-          <ModelParameter cn="CN=Root,Model=New Model,Vector=Compartments[cytoplasm],Vector=Metabolites[G6P]" value="6.02214179e+21" type="Species" simulationType="reactions"/>
+          <ModelParameter cn="CN=Root,Model=New Model,Vector=Compartments[cytoplasm],Vector=Metabolites[G6P]" value="6.02214179e+21" type="Species" simulationType="fixed"/>
           <ModelParameter cn="CN=Root,Model=New Model,Vector=Compartments[cytoplasm],Vector=Metabolites[G1P]" value="0" type="Species" simulationType="reactions"/>
-          <ModelParameter cn="CN=Root,Model=New Model,Vector=Compartments[cytoplasm],Vector=Metabolites[Phosphoglucomutase]" value="6022141790000001" type="Species" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=New Model,Vector=Compartments[cytoplasm],Vector=Metabolites[Pgm]" value="6022141790000001" type="Species" simulationType="fixed"/>
           <ModelParameter cn="CN=Root,Model=New Model,Vector=Compartments[cytoplasm],Vector=Metabolites[ADPG]" value="0" type="Species" simulationType="reactions"/>
           <ModelParameter cn="CN=Root,Model=New Model,Vector=Compartments[cytoplasm],Vector=Metabolites[GlgA]" value="6022141790000001" type="Species" simulationType="fixed"/>
           <ModelParameter cn="CN=Root,Model=New Model,Vector=Compartments[cytoplasm],Vector=Metabolites[ATP]" value="6022141790000001" type="Species" simulationType="fixed"/>
           <ModelParameter cn="CN=Root,Model=New Model,Vector=Compartments[cytoplasm],Vector=Metabolites[1\,4glucan]" value="0" type="Species" simulationType="reactions"/>
-          <ModelParameter cn="CN=Root,Model=New Model,Vector=Compartments[cytoplasm],Vector=Metabolites[GlgX]" value="6022141790000001" type="Species" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=New Model,Vector=Compartments[cytoplasm],Vector=Metabolites[GlgX]" value="6.022141790000001e+20" type="Species" simulationType="fixed"/>
           <ModelParameter cn="CN=Root,Model=New Model,Vector=Compartments[cytoplasm],Vector=Metabolites[GlgC]" value="6022141790000001" type="Species" simulationType="fixed"/>
           <ModelParameter cn="CN=Root,Model=New Model,Vector=Compartments[cytoplasm],Vector=Metabolites[ADP]" value="6022141790000001" type="Species" simulationType="fixed"/>
           <ModelParameter cn="CN=Root,Model=New Model,Vector=Compartments[cytoplasm],Vector=Metabolites[Glycogen]" value="0" type="Species" simulationType="reactions"/>
           <ModelParameter cn="CN=Root,Model=New Model,Vector=Compartments[cytoplasm],Vector=Metabolites[GlgB]" value="6022141790000001" type="Species" simulationType="fixed"/>
           <ModelParameter cn="CN=Root,Model=New Model,Vector=Compartments[cytoplasm],Vector=Metabolites[PPi]" value="6022141790000001" type="Species" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=New Model,Vector=Compartments[cytoplasm],Vector=Metabolites[AMP]" value="6022141790000001" type="Species" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=New Model,Vector=Compartments[cytoplasm],Vector=Metabolites[AspP]" value="6022141790000001" type="Species" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=New Model,Vector=Compartments[cytoplasm],Vector=Metabolites[GlgP]" value="6022141790000001" type="Species" simulationType="fixed"/>
         </ModelParameterGroup>
         <ModelParameterGroup cn="String=Initial Global Quantities" type="Group">
         </ModelParameterGroup>
@@ -572,20 +607,24 @@ a 1,4-α-D-glucan ⇄ a glycogen
           </ModelParameterGroup>
           <ModelParameterGroup cn="CN=Root,Model=New Model,Vector=Reactions[GlgA]" type="Reaction">
             <ModelParameter cn="CN=Root,Model=New Model,Vector=Reactions[GlgA],ParameterGroup=Parameters,Parameter=Km" value="3.5e-05" type="ReactionParameter" simulationType="fixed"/>
-            <ModelParameter cn="CN=Root,Model=New Model,Vector=Reactions[GlgA],ParameterGroup=Parameters,Parameter=V" value="0.1" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=New Model,Vector=Reactions[GlgA],ParameterGroup=Parameters,Parameter=V" value="0.01" type="ReactionParameter" simulationType="fixed"/>
           </ModelParameterGroup>
           <ModelParameterGroup cn="CN=Root,Model=New Model,Vector=Reactions[GlgC]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=New Model,Vector=Reactions[GlgC],ParameterGroup=Parameters,Parameter=Vmax" value="0.1" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=New Model,Vector=Reactions[GlgC],ParameterGroup=Parameters,Parameter=Vmax" value="0.01" type="ReactionParameter" simulationType="fixed"/>
             <ModelParameter cn="CN=Root,Model=New Model,Vector=Reactions[GlgC],ParameterGroup=Parameters,Parameter=KmB" value="2e-07" type="ReactionParameter" simulationType="fixed"/>
             <ModelParameter cn="CN=Root,Model=New Model,Vector=Reactions[GlgC],ParameterGroup=Parameters,Parameter=KmA" value="1e-05" type="ReactionParameter" simulationType="fixed"/>
           </ModelParameterGroup>
           <ModelParameterGroup cn="CN=Root,Model=New Model,Vector=Reactions[GlgB]" type="Reaction">
             <ModelParameter cn="CN=Root,Model=New Model,Vector=Reactions[GlgB],ParameterGroup=Parameters,Parameter=Km" value="1.42e-05" type="ReactionParameter" simulationType="fixed"/>
-            <ModelParameter cn="CN=Root,Model=New Model,Vector=Reactions[GlgB],ParameterGroup=Parameters,Parameter=V" value="0.1" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=New Model,Vector=Reactions[GlgB],ParameterGroup=Parameters,Parameter=V" value="0.01" type="ReactionParameter" simulationType="fixed"/>
           </ModelParameterGroup>
-          <ModelParameterGroup cn="CN=Root,Model=New Model,Vector=Reactions[GlgX]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=New Model,Vector=Reactions[GlgX],ParameterGroup=Parameters,Parameter=Km" value="1e-06" type="ReactionParameter" simulationType="fixed"/>
-            <ModelParameter cn="CN=Root,Model=New Model,Vector=Reactions[GlgX],ParameterGroup=Parameters,Parameter=V" value="0.09" type="ReactionParameter" simulationType="fixed"/>
+          <ModelParameterGroup cn="CN=Root,Model=New Model,Vector=Reactions[GlgX-GlgP]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=New Model,Vector=Reactions[GlgX-GlgP],ParameterGroup=Parameters,Parameter=Km" value="1e-07" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=New Model,Vector=Reactions[GlgX-GlgP],ParameterGroup=Parameters,Parameter=V" value="0.002" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=New Model,Vector=Reactions[AspP]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=New Model,Vector=Reactions[AspP],ParameterGroup=Parameters,Parameter=Km" value="6e-05" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=New Model,Vector=Reactions[AspP],ParameterGroup=Parameters,Parameter=V" value="0.01" type="ReactionParameter" simulationType="fixed"/>
           </ModelParameterGroup>
         </ModelParameterGroup>
       </ModelParameterSet>
@@ -595,20 +634,23 @@ a 1,4-α-D-glucan ⇄ a glycogen
       <StateTemplateVariable objectReference="Metabolite_3"/>
       <StateTemplateVariable objectReference="Metabolite_13"/>
       <StateTemplateVariable objectReference="Metabolite_7"/>
-      <StateTemplateVariable objectReference="Metabolite_23"/>
+      <StateTemplateVariable objectReference="Metabolite_21"/>
       <StateTemplateVariable objectReference="Metabolite_1"/>
       <StateTemplateVariable objectReference="Metabolite_5"/>
       <StateTemplateVariable objectReference="Metabolite_9"/>
       <StateTemplateVariable objectReference="Metabolite_11"/>
       <StateTemplateVariable objectReference="Metabolite_15"/>
       <StateTemplateVariable objectReference="Metabolite_17"/>
-      <StateTemplateVariable objectReference="Metabolite_21"/>
+      <StateTemplateVariable objectReference="Metabolite_19"/>
+      <StateTemplateVariable objectReference="Metabolite_23"/>
       <StateTemplateVariable objectReference="Metabolite_25"/>
       <StateTemplateVariable objectReference="Metabolite_27"/>
+      <StateTemplateVariable objectReference="Metabolite_29"/>
+      <StateTemplateVariable objectReference="Metabolite_31"/>
       <StateTemplateVariable objectReference="Compartment_1"/>
     </StateTemplate>
     <InitialState type="initialState">
-      0 0 0 0 0 6.02214179e+21 6022141790000001 6022141790000001 6022141790000001 6022141790000001 6022141790000001 6022141790000001 6022141790000001 6022141790000001 1 
+      0 0 0 0 0 6.02214179e+21 6022141790000001 6022141790000001 6022141790000001 6.022141790000001e+20 6022141790000001 6022141790000001 6022141790000001 6022141790000001 6022141790000001 6022141790000001 6022141790000001 1 
     </InitialState>
   </Model>
   <ListOfTasks>
@@ -630,12 +672,12 @@ a 1,4-α-D-glucan ⇄ a glycogen
         <Parameter name="Maximum duration for backward integration" type="unsignedFloat" value="1000000"/>
       </Method>
     </Task>
-    <Task key="Task_15" name="Time-Course" type="timeCourse" scheduled="false" updateModel="true">
+    <Task key="Task_15" name="Time-Course" type="timeCourse" scheduled="false" updateModel="false">
       <Report reference="Report_9" target="pilar.txt" append="1" confirmOverwrite="1"/>
       <Problem>
-        <Parameter name="StepNumber" type="unsignedInteger" value="1000"/>
-        <Parameter name="StepSize" type="float" value="10"/>
-        <Parameter name="Duration" type="float" value="10000"/>
+        <Parameter name="StepNumber" type="unsignedInteger" value="175001"/>
+        <Parameter name="StepSize" type="float" value="0.0285714"/>
+        <Parameter name="Duration" type="float" value="5000"/>
         <Parameter name="TimeSeriesRequested" type="bool" value="1"/>
         <Parameter name="OutputStartTime" type="float" value="0"/>
         <Parameter name="Output Event" type="bool" value="1"/>
@@ -649,32 +691,32 @@ a 1,4-α-D-glucan ⇄ a glycogen
       </Method>
     </Task>
     <Task key="Task_16" name="Scan" type="scan" scheduled="false" updateModel="false">
-      <Report reference="Report_7" target="" append="1" confirmOverwrite="1"/>
+      <Report reference="Report_19" target="" append="1" confirmOverwrite="1"/>
       <Problem>
         <Parameter name="Subtask" type="unsignedInteger" value="1"/>
         <ParameterGroup name="ScanItems">
           <ParameterGroup name="ScanItem">
+            <Parameter name="Maximum" type="float" value="5"/>
+            <Parameter name="Minimum" type="float" value="0"/>
             <Parameter name="Number of steps" type="unsignedInteger" value="10"/>
-            <Parameter name="Type" type="unsignedInteger" value="1"/>
             <Parameter name="Object" type="cn" value="CN=Root,Model=New Model,Vector=Compartments[cytoplasm],Vector=Metabolites[1\,4glucan],Reference=InitialConcentration"/>
-            <Parameter name="Minimum" type="float" value="0"/>
-            <Parameter name="Maximum" type="float" value="5"/>
+            <Parameter name="Type" type="unsignedInteger" value="1"/>
             <Parameter name="log" type="bool" value="0"/>
           </ParameterGroup>
           <ParameterGroup name="ScanItem">
-            <Parameter name="Number of steps" type="unsignedInteger" value="10"/>
-            <Parameter name="Type" type="unsignedInteger" value="1"/>
-            <Parameter name="Object" type="cn" value="CN=Root,Model=New Model,Vector=Compartments[cytoplasm],Vector=Metabolites[GlgB],Reference=InitialConcentration"/>
-            <Parameter name="Minimum" type="float" value="5e-06"/>
             <Parameter name="Maximum" type="float" value="0.0002"/>
+            <Parameter name="Minimum" type="float" value="5e-06"/>
+            <Parameter name="Number of steps" type="unsignedInteger" value="10"/>
+            <Parameter name="Object" type="cn" value="CN=Root,Model=New Model,Vector=Compartments[cytoplasm],Vector=Metabolites[GlgB],Reference=InitialConcentration"/>
+            <Parameter name="Type" type="unsignedInteger" value="1"/>
             <Parameter name="log" type="bool" value="0"/>
           </ParameterGroup>
           <ParameterGroup name="ScanItem">
-            <Parameter name="Number of steps" type="unsignedInteger" value="10"/>
-            <Parameter name="Type" type="unsignedInteger" value="1"/>
-            <Parameter name="Object" type="cn" value="CN=Root,Model=New Model,Vector=Compartments[cytoplasm],Vector=Metabolites[Glycogen],Reference=InitialConcentration"/>
-            <Parameter name="Minimum" type="float" value="0"/>
             <Parameter name="Maximum" type="float" value="5"/>
+            <Parameter name="Minimum" type="float" value="0"/>
+            <Parameter name="Number of steps" type="unsignedInteger" value="10"/>
+            <Parameter name="Object" type="cn" value="CN=Root,Model=New Model,Vector=Compartments[cytoplasm],Vector=Metabolites[Glycogen],Reference=InitialConcentration"/>
+            <Parameter name="Type" type="unsignedInteger" value="1"/>
             <Parameter name="log" type="bool" value="0"/>
           </ParameterGroup>
         </ParameterGroup>
@@ -848,10 +890,10 @@ a 1,4-α-D-glucan ⇄ a glycogen
         <Parameter name="PositiveDirection" type="bool" value="1"/>
         <Parameter name="NumOutCrossingsLimit" type="unsignedInteger" value="0"/>
         <Parameter name="LimitUntilConvergence" type="bool" value="0"/>
-        <Parameter name="ConvergenceTolerance" type="float" value="1e-06"/>
+        <Parameter name="ConvergenceTolerance" type="float" value="0"/>
         <Parameter name="Threshold" type="float" value="0"/>
         <Parameter name="DelayOutputUntilConvergence" type="bool" value="0"/>
-        <Parameter name="OutputConvergenceTolerance" type="float" value="1e-06"/>
+        <Parameter name="OutputConvergenceTolerance" type="float" value="0"/>
         <ParameterText name="TriggerExpression" type="expression">
           
         </ParameterText>
@@ -998,7 +1040,7 @@ a 1,4-α-D-glucan ⇄ a glycogen
         <Object cn="CN=Root,Vector=TaskList[Linear Noise Approximation],Object=Result"/>
       </Footer>
     </Report>
-    <Report key="Report_8" name="Scan Parameters, Time, Concentrations, Volumes, and Global Quantity Values" taskType="scan" separator="&#x09;" precision="6">
+    <Report key="Report_18" name="Scan Parameters, Time, Concentrations, Volumes, and Global Quantity Values" taskType="scan" separator="&#x09;" precision="6">
       <Comment>
         A table of scan parameters, time, variable species concentrations, variable compartment volumes, and variable global quantity values.
       </Comment>
@@ -1014,7 +1056,7 @@ a 1,4-α-D-glucan ⇄ a glycogen
         <Object cn="CN=Root,Model=New Model,Vector=Compartments[cytoplasm],Vector=Metabolites[Glycogen],Reference=Concentration"/>
       </Table>
     </Report>
-    <Report key="Report_7" name="Scan Parameters, Time, Concentrations, Volumes, and Global Quantity Values_1" taskType="scan" separator="&#x09;" precision="6">
+    <Report key="Report_19" name="Scan Parameters, Time, Concentrations, Volumes, and Global Quantity Values_1" taskType="scan" separator="&#x09;" precision="6">
       <Comment>
         A table of scan parameters, time, variable species concentrations, variable compartment volumes, and variable global quantity values.
       </Comment>
@@ -1231,101 +1273,101 @@ a 1,4-α-D-glucan ⇄ a glycogen
   </GUI>
   <ListOfLayouts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <Layout key="Layout_2" name="COPASI autolayout">
-      <Dimensions width="735.6104823193339" height="455.2964731524057"/>
+      <Dimensions width="560.77532912026" height="449.3239631141937"/>
       <ListOfMetabGlyphs>
         <MetaboliteGlyph key="Layout_3" name="MetabGlyph" metabolite="Metabolite_1">
           <BoundingBox>
-            <Position x="573.9088523247653" y="126.5077100525094"/>
+            <Position x="475.6961724838766" y="0"/>
             <Dimensions width="52" height="28"/>
           </BoundingBox>
         </MetaboliteGlyph>
         <MetaboliteGlyph key="Layout_4" name="MetabGlyph" metabolite="Metabolite_3">
           <BoundingBox>
-            <Position x="618.7856377335816" y="27.54418615193208"/>
+            <Position x="290.1775555936682" y="169.2402775105664"/>
             <Dimensions width="52" height="28"/>
           </BoundingBox>
         </MetaboliteGlyph>
         <MetaboliteGlyph key="Layout_5" name="MetabGlyph" metabolite="Metabolite_5">
           <BoundingBox>
-            <Position x="360.5984731092951" y="24.84366392586435"/>
+            <Position x="0" y="301.7586924969484"/>
             <Dimensions width="292" height="28"/>
           </BoundingBox>
         </MetaboliteGlyph>
         <MetaboliteGlyph key="Layout_6" name="MetabGlyph" metabolite="Metabolite_13">
           <BoundingBox>
-            <Position x="0" y="421.040390988077"/>
+            <Position x="382.1831933573401" y="154.4959875742105"/>
             <Dimensions width="164" height="28"/>
           </BoundingBox>
         </MetaboliteGlyph>
-        <MetaboliteGlyph key="Layout_7" name="MetabGlyph" metabolite="Metabolite_23">
+        <MetaboliteGlyph key="Layout_7" name="MetabGlyph" metabolite="Metabolite_21">
           <BoundingBox>
-            <Position x="124.5222372901076" y="427.2964731524057"/>
+            <Position x="55.57726582823971" y="274.5006626008902"/>
             <Dimensions width="132" height="28"/>
           </BoundingBox>
         </MetaboliteGlyph>
-        <MetaboliteGlyph key="Layout_8" name="MetabGlyph" metabolite="Metabolite_25">
+        <MetaboliteGlyph key="Layout_8" name="MetabGlyph" metabolite="Metabolite_23">
           <BoundingBox>
-            <Position x="109.4173241456804" y="297.4108445950646"/>
+            <Position x="96.25941830355525" y="292.0852769597218"/>
             <Dimensions width="68" height="28"/>
           </BoundingBox>
         </MetaboliteGlyph>
         <MetaboliteGlyph key="Layout_9" name="MetabGlyph" metabolite="Metabolite_7">
           <BoundingBox>
-            <Position x="47.15703360321663" y="106.8103525794457"/>
+            <Position x="209.6904057992454" y="349.8705592115206"/>
             <Dimensions width="68" height="28"/>
           </BoundingBox>
         </MetaboliteGlyph>
         <MetaboliteGlyph key="Layout_10" name="MetabGlyph" metabolite="Metabolite_13">
           <BoundingBox>
-            <Position x="19.38610157500466" y="0"/>
+            <Position x="160.2566064994799" y="421.3239631141937"/>
             <Dimensions width="164" height="28"/>
           </BoundingBox>
         </MetaboliteGlyph>
         <MetaboliteGlyph key="Layout_11" name="MetabGlyph" metabolite="Metabolite_9">
           <BoundingBox>
-            <Position x="182.0067186348838" y="77.01956478941855"/>
+            <Position x="450.4081141675341" y="231.1942306800217"/>
             <Dimensions width="68" height="28"/>
           </BoundingBox>
         </MetaboliteGlyph>
         <MetaboliteGlyph key="Layout_12" name="MetabGlyph" metabolite="" objectRole="invisible">
           <BoundingBox>
-            <Position x="644.8481070528114" y="416.1003602805458"/>
+            <Position x="559.77532912026" y="233.8024791103029"/>
             <Dimensions width="1" height="1"/>
           </BoundingBox>
         </MetaboliteGlyph>
         <MetaboliteGlyph key="Layout_13" name="MetabGlyph" metabolite="" objectRole="invisible">
           <BoundingBox>
-            <Position x="734.6104823193339" y="287.8466867569132"/>
+            <Position x="546.2199905573864" y="77.48243362449045"/>
             <Dimensions width="1" height="1"/>
           </BoundingBox>
         </MetaboliteGlyph>
         <MetaboliteGlyph key="Layout_14" name="MetabGlyph" metabolite="Metabolite_3">
           <BoundingBox>
-            <Position x="378.3343954732729" y="198.8446841652012"/>
+            <Position x="506.4795128588643" y="27.56877152962697"/>
             <Dimensions width="52" height="28"/>
           </BoundingBox>
         </MetaboliteGlyph>
         <MetaboliteGlyph key="Layout_15" name="MetabGlyph" metabolite="Metabolite_11">
           <BoundingBox>
-            <Position x="341.6639289741872" y="413.7337454989265"/>
+            <Position x="360.2938783139089" y="292.1789482866822"/>
             <Dimensions width="52" height="28"/>
           </BoundingBox>
         </MetaboliteGlyph>
         <MetaboliteGlyph key="Layout_16" name="MetabGlyph" metabolite="Metabolite_7">
           <BoundingBox>
-            <Position x="301.3162450156822" y="239.4298466936316"/>
+            <Position x="296.0076108371028" y="344.4074435420258"/>
             <Dimensions width="68" height="28"/>
           </BoundingBox>
         </MetaboliteGlyph>
-        <MetaboliteGlyph key="Layout_17" name="MetabGlyph" metabolite="Metabolite_27">
+        <MetaboliteGlyph key="Layout_17" name="MetabGlyph" metabolite="Metabolite_25">
           <BoundingBox>
-            <Position x="434.5996043900612" y="270.5827660855466"/>
+            <Position x="382.7985414808183" y="181.9450145260667"/>
             <Dimensions width="52" height="28"/>
           </BoundingBox>
         </MetaboliteGlyph>
         <MetaboliteGlyph key="Layout_18" name="MetabGlyph" metabolite="">
           <BoundingBox>
-            <Position x="419.8195825345113" y="372.3593776395628"/>
+            <Position x="331.3864446273058" y="306.7173599429448"/>
             <Dimensions width="52" height="28"/>
           </BoundingBox>
         </MetaboliteGlyph>
@@ -1335,8 +1377,8 @@ a 1,4-α-D-glucan ⇄ a glycogen
           <Curve>
             <ListOfCurveSegments>
               <CurveSegment xsi:type="LineSegment">
-                <Start x="598.5223461511102" y="80.23105758506982"/>
-                <End x="600.7913841394973" y="81.25914239622706"/>
+                <Start x="326.3101416256891" y="170.8357929061301"/>
+                <End x="334.179353284078" y="163.9581115584303"/>
               </CurveSegment>
             </ListOfCurveSegments>
           </Curve>
@@ -1345,10 +1387,10 @@ a 1,4-α-D-glucan ⇄ a glycogen
               <Curve>
                 <ListOfCurveSegments>
                   <CurveSegment xsi:type="CubicBezier">
-                    <Start x="600.7913841394973" y="81.25914239622706"/>
-                    <End x="600.9373533493713" y="121.5077100525094"/>
-                    <BasePoint1 x="603.0604221278843" y="82.28722720738429"/>
-                    <BasePoint2 x="602.5661472357244" y="102.1544898327362"/>
+                    <Start x="334.179353284078" y="163.9581115584303"/>
+                    <End x="480.4961765178364" y="33"/>
+                    <BasePoint1 x="342.0485649424669" y="157.0804302107306"/>
+                    <BasePoint2 x="413.2396736447488" y="93.32079476844039"/>
                   </CurveSegment>
                 </ListOfCurveSegments>
               </Curve>
@@ -1357,10 +1399,10 @@ a 1,4-α-D-glucan ⇄ a glycogen
               <Curve>
                 <ListOfCurveSegments>
                   <CurveSegment xsi:type="CubicBezier">
-                    <Start x="600.7913841394973" y="81.25914239622706"/>
-                    <End x="625.3276130998961" y="60.54418615193208"/>
-                    <BasePoint1 x="603.0604221278843" y="82.28722720738429"/>
-                    <BasePoint2 x="614.7612771109868" y="71.6727278824475"/>
+                    <Start x="334.179353284078" y="163.9581115584303"/>
+                    <End x="334.9677714536155" y="164.2402775105664"/>
+                    <BasePoint1 x="342.0485649424669" y="157.0804302107306"/>
+                    <BasePoint2 x="340.4754711126384" y="158.9409335237236"/>
                   </CurveSegment>
                 </ListOfCurveSegments>
               </Curve>
@@ -1369,10 +1411,10 @@ a 1,4-α-D-glucan ⇄ a glycogen
               <Curve>
                 <ListOfCurveSegments>
                   <CurveSegment xsi:type="CubicBezier">
-                    <Start x="539.7232072847182" y="57.84366392586435"/>
-                    <End x="595.529804592804" y="89.85374265550254"/>
-                    <BasePoint1 x="567.6265059387611" y="73.84870329068345"/>
-                    <BasePoint2 x="591.4027440403042" y="98.96238532035665"/>
+                    <Start x="167.6536569183561" y="296.7586924969484"/>
+                    <End x="323.6639721576305" y="159.8674504899958"/>
+                    <BasePoint1 x="245.6588145379933" y="228.3130714934721"/>
+                    <BasePoint2 x="317.0831968603774" y="152.3379487477115"/>
                   </CurveSegment>
                 </ListOfCurveSegments>
               </Curve>
@@ -1383,8 +1425,8 @@ a 1,4-α-D-glucan ⇄ a glycogen
           <Curve>
             <ListOfCurveSegments>
               <CurveSegment xsi:type="LineSegment">
-                <Start x="137.7590846393225" y="412.0741715292825"/>
-                <End x="137.6164212112969" y="414.55933919985"/>
+                <Start x="228.9544153790474" y="253.4584818667884"/>
+                <End x="235.0425881613086" y="251.0813240782896"/>
               </CurveSegment>
             </ListOfCurveSegments>
           </Curve>
@@ -1393,10 +1435,10 @@ a 1,4-α-D-glucan ⇄ a glycogen
               <Curve>
                 <ListOfCurveSegments>
                   <CurveSegment xsi:type="CubicBezier">
-                    <Start x="137.6164212112969" y="414.55933919985"/>
-                    <End x="140.5690256166886" y="416.040390988077"/>
-                    <BasePoint1 x="137.4737577832713" y="417.0445068704175"/>
-                    <BasePoint2 x="138.9857258429736" y="417.1637408468891"/>
+                    <Start x="235.0425881613086" y="251.0813240782896"/>
+                    <End x="411.3457360839409" y="187.4959875742105"/>
+                    <BasePoint1 x="241.1307609435698" y="248.7041662897907"/>
+                    <BasePoint2 x="327.7602917093207" y="217.5057874848759"/>
                   </CurveSegment>
                 </ListOfCurveSegments>
               </Curve>
@@ -1405,10 +1447,10 @@ a 1,4-α-D-glucan ⇄ a glycogen
               <Curve>
                 <ListOfCurveSegments>
                   <CurveSegment xsi:type="CubicBezier">
-                    <Start x="137.6164212112969" y="414.55933919985"/>
-                    <End x="148.9618500245824" y="422.2964731524057"/>
-                    <BasePoint1 x="137.4737577832713" y="417.0445068704175"/>
-                    <BasePoint2 x="143.1821380469204" y="420.2917819290535"/>
+                    <Start x="235.0425881613086" y="251.0813240782896"/>
+                    <End x="178.6555671297975" y="269.5006626008902"/>
+                    <BasePoint1 x="241.1307609435698" y="248.7041662897907"/>
+                    <BasePoint2 x="211.415207232249" y="258.5081249982157"/>
                   </CurveSegment>
                 </ListOfCurveSegments>
               </Curve>
@@ -1417,10 +1459,10 @@ a 1,4-α-D-glucan ⇄ a glycogen
               <Curve>
                 <ListOfCurveSegments>
                   <CurveSegment xsi:type="CubicBezier">
-                    <Start x="140.4710957466963" y="330.4108445950646"/>
-                    <End x="127.7041895314139" y="412.7436393553117"/>
-                    <BasePoint1 x="134.0876426390551" y="371.5772419751881"/>
-                    <BasePoint2 x="117.7206261375181" y="412.1705233460572"/>
+                    <Start x="159.7845695147723" y="287.0852769597218"/>
+                    <End x="228.3613700847207" y="242.9547930374581"/>
+                    <BasePoint1 x="194.0729697997465" y="265.0200349985899"/>
+                    <BasePoint2 x="224.7242383992634" y="233.6396831023772"/>
                   </CurveSegment>
                 </ListOfCurveSegments>
               </Curve>
@@ -1431,8 +1473,8 @@ a 1,4-α-D-glucan ⇄ a glycogen
           <Curve>
             <ListOfCurveSegments>
               <CurveSegment xsi:type="LineSegment">
-                <Start x="116.9433555763253" y="72.26765071094933"/>
-                <End x="114.4984233870668" y="71.80455790892775"/>
+                <Start x="282.9946882101254" y="136.0701495783711"/>
+                <End x="279.1831470614813" y="161.1679697292745"/>
               </CurveSegment>
             </ListOfCurveSegments>
           </Curve>
@@ -1441,10 +1483,10 @@ a 1,4-α-D-glucan ⇄ a glycogen
               <Curve>
                 <ListOfCurveSegments>
                   <CurveSegment xsi:type="CubicBezier">
-                    <Start x="114.4984233870668" y="71.80455790892775"/>
-                    <End x="93.02373860286124" y="101.8103525794457"/>
-                    <BasePoint1 x="112.0534911978083" y="71.34146510690618"/>
-                    <BasePoint2 x="101.9273818530201" y="86.46013564267054"/>
+                    <Start x="279.1831470614813" y="161.1679697292745"/>
+                    <End x="247.0796323635121" y="344.8705592115206"/>
+                    <BasePoint1 x="275.3716059128373" y="186.2657898801779"/>
+                    <BasePoint2 x="260.2727338510136" y="271.8426295835751"/>
                   </CurveSegment>
                 </ListOfCurveSegments>
               </Curve>
@@ -1453,10 +1495,10 @@ a 1,4-α-D-glucan ⇄ a glycogen
               <Curve>
                 <ListOfCurveSegments>
                   <CurveSegment xsi:type="CubicBezier">
-                    <Start x="114.4984233870668" y="71.80455790892775"/>
-                    <End x="104.9207235532781" y="33"/>
-                    <BasePoint1 x="112.0534911978083" y="71.34146510690618"/>
-                    <BasePoint2 x="107.8758743282285" y="52.0549593529477"/>
+                    <Start x="279.1831470614813" y="161.1679697292745"/>
+                    <End x="244.7828636412706" y="416.3239631141937"/>
+                    <BasePoint1 x="275.3716059128373" y="186.2657898801779"/>
+                    <BasePoint2 x="259.1243494898929" y="307.5693315349117"/>
                   </CurveSegment>
                 </ListOfCurveSegments>
               </Curve>
@@ -1465,10 +1507,10 @@ a 1,4-α-D-glucan ⇄ a glycogen
               <Curve>
                 <ListOfCurveSegments>
                   <CurveSegment xsi:type="CubicBezier">
-                    <Start x="177.0067186348838" y="79.60433551559453"/>
-                    <End x="117.5818936861597" y="62.21079701952931"/>
-                    <BasePoint1 x="147.2943061605217" y="70.90756626756192"/>
-                    <BasePoint2 x="119.4428978906233" y="52.38548972912008"/>
+                    <Start x="445.7515970888468" y="226.1942306800217"/>
+                    <End x="290.9755562471721" y="150.1205179343599"/>
+                    <BasePoint1 x="368.3635766680094" y="188.1573743071908"/>
+                    <BasePoint2 x="300.8621948585408" y="151.621976214897"/>
                   </CurveSegment>
                 </ListOfCurveSegments>
               </Curve>
@@ -1479,8 +1521,8 @@ a 1,4-α-D-glucan ⇄ a glycogen
           <Curve>
             <ListOfCurveSegments>
               <CurveSegment xsi:type="LineSegment">
-                <Start x="681.0267013181567" y="355.5816745760877"/>
-                <End x="690.002938844809" y="342.7563072237244"/>
+                <Start x="544.5368645273445" y="159.4257428576431"/>
+                <End x="543.1813306710571" y="143.7937383090619"/>
               </CurveSegment>
             </ListOfCurveSegments>
           </Curve>
@@ -1489,10 +1531,10 @@ a 1,4-α-D-glucan ⇄ a glycogen
               <Curve>
                 <ListOfCurveSegments>
                   <CurveSegment xsi:type="CubicBezier">
-                    <Start x="681.0267013181567" y="355.5816745760877"/>
-                    <End x="648.3954789102512" y="411.1003602805458"/>
-                    <BasePoint1 x="672.0504637915045" y="368.407041928451"/>
-                    <BasePoint2 x="657.9789119692148" y="392.9600429425892"/>
+                    <Start x="544.5368645273445" y="159.4257428576431"/>
+                    <End x="558.9400860230918" y="228.8024791103029"/>
+                    <BasePoint1 x="545.8923983836319" y="175.0577474062244"/>
+                    <BasePoint2 x="552.7551256674337" y="205.8381143954089"/>
                   </CurveSegment>
                 </ListOfCurveSegments>
               </Curve>
@@ -1501,10 +1543,10 @@ a 1,4-α-D-glucan ⇄ a glycogen
               <Curve>
                 <ListOfCurveSegments>
                   <CurveSegment xsi:type="CubicBezier">
-                    <Start x="690.002938844809" y="342.7563072237244"/>
-                    <End x="730.3316978557443" y="293.8466867569132"/>
-                    <BasePoint1 x="698.9791763714612" y="329.9309398713611"/>
-                    <BasePoint2 x="716.8994964952658" y="308.6824714760463"/>
+                    <Start x="543.1813306710571" y="143.7937383090619"/>
+                    <End x="546.1835529125519" y="83.48243362449045"/>
+                    <BasePoint1 x="541.8257968147698" y="128.1617337604806"/>
+                    <BasePoint2 x="543.665791399589" y="101.9140825553402"/>
                   </CurveSegment>
                 </ListOfCurveSegments>
               </Curve>
@@ -1515,8 +1557,8 @@ a 1,4-α-D-glucan ⇄ a glycogen
           <Curve>
             <ListOfCurveSegments>
               <CurveSegment xsi:type="LineSegment">
-                <Start x="395.1324066107514" y="281.5645342867898"/>
-                <End x="396.3282828586656" y="276.4362434425424"/>
+                <Start x="445.7649904216931" y="222.1403711058036"/>
+                <End x="436.7666284789506" y="232.4706080183928"/>
               </CurveSegment>
             </ListOfCurveSegments>
           </Curve>
@@ -1525,10 +1567,10 @@ a 1,4-α-D-glucan ⇄ a glycogen
               <Curve>
                 <ListOfCurveSegments>
                   <CurveSegment xsi:type="CubicBezier">
-                    <Start x="395.1324066107514" y="281.5645342867898"/>
-                    <End x="401.6591834162805" y="231.8446841652012"/>
-                    <BasePoint1 x="393.9365303628373" y="286.6928251310373"/>
-                    <BasePoint2 x="397.4988878275803" y="260.5508273591811"/>
+                    <Start x="445.7649904216931" y="222.1403711058036"/>
+                    <End x="523.8059036590129" y="60.56877152962697"/>
+                    <BasePoint1 x="454.7633523644357" y="211.8101341932145"/>
+                    <BasePoint2 x="491.5342184974099" y="133.6068936332734"/>
                   </CurveSegment>
                 </ListOfCurveSegments>
               </Curve>
@@ -1537,10 +1579,10 @@ a 1,4-α-D-glucan ⇄ a glycogen
               <Curve>
                 <ListOfCurveSegments>
                   <CurveSegment xsi:type="CubicBezier">
-                    <Start x="395.1324066107514" y="281.5645342867898"/>
-                    <End x="371.20318144845" y="408.7337454989265"/>
-                    <BasePoint1 x="393.9365303628373" y="286.6928251310373"/>
-                    <BasePoint2 x="382.2708868436651" y="348.9953580260437"/>
+                    <Start x="445.7649904216931" y="222.1403711058036"/>
+                    <End x="400.0793647530149" y="287.1789482866822"/>
+                    <BasePoint1 x="454.7633523644357" y="211.8101341932145"/>
+                    <BasePoint2 x="429.670949044411" y="246.911982011801"/>
                   </CurveSegment>
                 </ListOfCurveSegments>
               </Curve>
@@ -1549,10 +1591,10 @@ a 1,4-α-D-glucan ⇄ a glycogen
               <Curve>
                 <ListOfCurveSegments>
                   <CurveSegment xsi:type="CubicBezier">
-                    <Start x="396.3282828586656" y="276.4362434425424"/>
-                    <End x="374.3162450156822" y="264.6381654497156"/>
-                    <BasePoint1 x="397.5241591065798" y="271.3079525982949"/>
-                    <BasePoint2 x="386.2191711231095" y="266.6909863129434"/>
+                    <Start x="436.7666284789506" y="232.4706080183928"/>
+                    <End x="346.0746215492885" y="339.4074435420258"/>
+                    <BasePoint1 x="427.768266536208" y="242.800844930982"/>
+                    <BasePoint2 x="384.6718535570626" y="293.6867034646512"/>
                   </CurveSegment>
                 </ListOfCurveSegments>
               </Curve>
@@ -1561,10 +1603,10 @@ a 1,4-α-D-glucan ⇄ a glycogen
               <Curve>
                 <ListOfCurveSegments>
                   <CurveSegment xsi:type="CubicBezier">
-                    <Start x="396.3282828586656" y="276.4362434425424"/>
-                    <End x="429.5996043900612" y="278.0585280677997"/>
-                    <BasePoint1 x="397.5241591065798" y="271.3079525982949"/>
-                    <BasePoint2 x="413.860850810299" y="273.4011676219855"/>
+                    <Start x="436.7666284789506" y="232.4706080183928"/>
+                    <End x="416.490749108721" y="214.9450145260667"/>
+                    <BasePoint1 x="427.768266536208" y="242.800844930982"/>
+                    <BasePoint2 x="419.8799173367788" y="231.4554889566716"/>
                   </CurveSegment>
                 </ListOfCurveSegments>
               </Curve>
@@ -1573,10 +1615,10 @@ a 1,4-α-D-glucan ⇄ a glycogen
               <Curve>
                 <ListOfCurveSegments>
                   <CurveSegment xsi:type="CubicBezier">
-                    <Start x="438.524173785682" y="367.3593776395628"/>
-                    <End x="405.469061386528" y="281.2713793920736"/>
-                    <BasePoint1 x="421.996617586105" y="324.3153785158182"/>
-                    <BasePoint2 x="415.2077780383474" y="283.5423699194812"/>
+                    <Start x="371.8937260805212" y="301.7173599429448"/>
+                    <End x="433.7253762841329" y="220.737242637215"/>
+                    <BasePoint1 x="402.809551182327" y="261.2273012900799"/>
+                    <BasePoint2 x="426.1849431179439" y="214.1689957123318"/>
                   </CurveSegment>
                 </ListOfCurveSegments>
               </Curve>
@@ -1587,86 +1629,587 @@ a 1,4-α-D-glucan ⇄ a glycogen
       <ListOfTextGlyphs>
         <TextGlyph key="Layout_40" name="TextGlyph" graphicalObject="Layout_3" originOfText="Metabolite_1">
           <BoundingBox>
-            <Position x="573.9088523247653" y="126.5077100525094"/>
+            <Position x="475.6961724838766" y="0"/>
             <Dimensions width="48" height="24"/>
           </BoundingBox>
         </TextGlyph>
         <TextGlyph key="Layout_41" name="TextGlyph" graphicalObject="Layout_4" originOfText="Metabolite_3">
           <BoundingBox>
-            <Position x="618.7856377335816" y="27.54418615193208"/>
+            <Position x="290.1775555936682" y="169.2402775105664"/>
             <Dimensions width="48" height="24"/>
           </BoundingBox>
         </TextGlyph>
         <TextGlyph key="Layout_42" name="TextGlyph" graphicalObject="Layout_5" originOfText="Metabolite_5">
           <BoundingBox>
-            <Position x="360.5984731092951" y="24.84366392586435"/>
+            <Position x="0" y="301.7586924969484"/>
             <Dimensions width="288" height="24"/>
           </BoundingBox>
         </TextGlyph>
         <TextGlyph key="Layout_43" name="TextGlyph" graphicalObject="Layout_6" originOfText="Metabolite_13">
           <BoundingBox>
-            <Position x="0" y="421.040390988077"/>
+            <Position x="382.1831933573401" y="154.4959875742105"/>
             <Dimensions width="160" height="24"/>
           </BoundingBox>
         </TextGlyph>
-        <TextGlyph key="Layout_44" name="TextGlyph" graphicalObject="Layout_7" originOfText="Metabolite_23">
+        <TextGlyph key="Layout_44" name="TextGlyph" graphicalObject="Layout_7" originOfText="Metabolite_21">
           <BoundingBox>
-            <Position x="124.5222372901076" y="427.2964731524057"/>
+            <Position x="55.57726582823971" y="274.5006626008902"/>
             <Dimensions width="128" height="24"/>
           </BoundingBox>
         </TextGlyph>
-        <TextGlyph key="Layout_45" name="TextGlyph" graphicalObject="Layout_8" originOfText="Metabolite_25">
+        <TextGlyph key="Layout_45" name="TextGlyph" graphicalObject="Layout_8" originOfText="Metabolite_23">
           <BoundingBox>
-            <Position x="109.4173241456804" y="297.4108445950646"/>
+            <Position x="96.25941830355525" y="292.0852769597218"/>
             <Dimensions width="64" height="24"/>
           </BoundingBox>
         </TextGlyph>
         <TextGlyph key="Layout_46" name="TextGlyph" graphicalObject="Layout_9" originOfText="Metabolite_7">
           <BoundingBox>
-            <Position x="47.15703360321663" y="106.8103525794457"/>
+            <Position x="209.6904057992454" y="349.8705592115206"/>
             <Dimensions width="64" height="24"/>
           </BoundingBox>
         </TextGlyph>
         <TextGlyph key="Layout_47" name="TextGlyph" graphicalObject="Layout_10" originOfText="Metabolite_13">
           <BoundingBox>
-            <Position x="19.38610157500466" y="0"/>
+            <Position x="160.2566064994799" y="421.3239631141937"/>
             <Dimensions width="160" height="24"/>
           </BoundingBox>
         </TextGlyph>
         <TextGlyph key="Layout_48" name="TextGlyph" graphicalObject="Layout_11" originOfText="Metabolite_9">
           <BoundingBox>
-            <Position x="182.0067186348838" y="77.01956478941855"/>
+            <Position x="450.4081141675341" y="231.1942306800217"/>
             <Dimensions width="64" height="24"/>
           </BoundingBox>
         </TextGlyph>
         <TextGlyph key="Layout_49" name="TextGlyph" graphicalObject="Layout_14" originOfText="Metabolite_3">
           <BoundingBox>
-            <Position x="378.3343954732729" y="198.8446841652012"/>
+            <Position x="506.4795128588643" y="27.56877152962697"/>
             <Dimensions width="48" height="24"/>
           </BoundingBox>
         </TextGlyph>
         <TextGlyph key="Layout_50" name="TextGlyph" graphicalObject="Layout_15" originOfText="Metabolite_11">
           <BoundingBox>
-            <Position x="341.6639289741872" y="413.7337454989265"/>
+            <Position x="360.2938783139089" y="292.1789482866822"/>
             <Dimensions width="48" height="24"/>
           </BoundingBox>
         </TextGlyph>
         <TextGlyph key="Layout_51" name="TextGlyph" graphicalObject="Layout_16" originOfText="Metabolite_7">
           <BoundingBox>
-            <Position x="301.3162450156822" y="239.4298466936316"/>
+            <Position x="296.0076108371028" y="344.4074435420258"/>
             <Dimensions width="64" height="24"/>
           </BoundingBox>
         </TextGlyph>
-        <TextGlyph key="Layout_52" name="TextGlyph" graphicalObject="Layout_17" originOfText="Metabolite_27">
+        <TextGlyph key="Layout_52" name="TextGlyph" graphicalObject="Layout_17" originOfText="Metabolite_25">
           <BoundingBox>
-            <Position x="434.5996043900612" y="270.5827660855466"/>
+            <Position x="382.7985414808183" y="181.9450145260667"/>
             <Dimensions width="48" height="24"/>
           </BoundingBox>
         </TextGlyph>
         <TextGlyph key="Layout_53" name="TextGlyph" graphicalObject="Layout_18" text="unset">
           <BoundingBox>
-            <Position x="419.8195825345113" y="372.3593776395628"/>
+            <Position x="331.3864446273058" y="306.7173599429448"/>
             <Dimensions width="48" height="24"/>
+          </BoundingBox>
+        </TextGlyph>
+      </ListOfTextGlyphs>
+    </Layout>
+    <Layout key="Layout_54" name="COPASI autolayout 1">
+      <Dimensions width="887.800552714576" height="597.2810581387665"/>
+      <ListOfMetabGlyphs>
+        <MetaboliteGlyph key="Layout_55" name="MetabGlyph" metabolite="Metabolite_1">
+          <BoundingBox>
+            <Position x="256.3252848453722" y="201.192965263499"/>
+            <Dimensions width="52" height="28"/>
+          </BoundingBox>
+        </MetaboliteGlyph>
+        <MetaboliteGlyph key="Layout_56" name="MetabGlyph" metabolite="Metabolite_3">
+          <BoundingBox>
+            <Position x="231.0589732957587" y="307.1174368019019"/>
+            <Dimensions width="52" height="28"/>
+          </BoundingBox>
+        </MetaboliteGlyph>
+        <MetaboliteGlyph key="Layout_57" name="MetabGlyph" metabolite="Metabolite_5">
+          <BoundingBox>
+            <Position x="0" y="226.7375357415549"/>
+            <Dimensions width="292" height="28"/>
+          </BoundingBox>
+        </MetaboliteGlyph>
+        <MetaboliteGlyph key="Layout_58" name="MetabGlyph" metabolite="Metabolite_7">
+          <BoundingBox>
+            <Position x="518.5852823732421" y="0"/>
+            <Dimensions width="68" height="28"/>
+          </BoundingBox>
+        </MetaboliteGlyph>
+        <MetaboliteGlyph key="Layout_59" name="MetabGlyph" metabolite="Metabolite_13">
+          <BoundingBox>
+            <Position x="429.8476018098822" y="173.6597697219977"/>
+            <Dimensions width="148" height="28"/>
+          </BoundingBox>
+        </MetaboliteGlyph>
+        <MetaboliteGlyph key="Layout_60" name="MetabGlyph" metabolite="Metabolite_19">
+          <BoundingBox>
+            <Position x="591.09142444399" y="79.05672914192564"/>
+            <Dimensions width="52" height="28"/>
+          </BoundingBox>
+        </MetaboliteGlyph>
+        <MetaboliteGlyph key="Layout_61" name="MetabGlyph" metabolite="Metabolite_9">
+          <BoundingBox>
+            <Position x="412.9553281232556" y="37.62668914250298"/>
+            <Dimensions width="68" height="28"/>
+          </BoundingBox>
+        </MetaboliteGlyph>
+        <MetaboliteGlyph key="Layout_62" name="MetabGlyph" metabolite="Metabolite_3">
+          <BoundingBox>
+            <Position x="444.2236778345318" y="398.2195311303312"/>
+            <Dimensions width="52" height="28"/>
+          </BoundingBox>
+        </MetaboliteGlyph>
+        <MetaboliteGlyph key="Layout_63" name="MetabGlyph" metabolite="Metabolite_11">
+          <BoundingBox>
+            <Position x="573.7729736143319" y="398.2444047543995"/>
+            <Dimensions width="52" height="28"/>
+          </BoundingBox>
+        </MetaboliteGlyph>
+        <MetaboliteGlyph key="Layout_64" name="MetabGlyph" metabolite="Metabolite_7">
+          <BoundingBox>
+            <Position x="515.7660136019185" y="334.9041284749828"/>
+            <Dimensions width="68" height="28"/>
+          </BoundingBox>
+        </MetaboliteGlyph>
+        <MetaboliteGlyph key="Layout_65" name="MetabGlyph" metabolite="Metabolite_25">
+          <BoundingBox>
+            <Position x="509.3823272254658" y="462.5278518127598"/>
+            <Dimensions width="52" height="28"/>
+          </BoundingBox>
+        </MetaboliteGlyph>
+        <MetaboliteGlyph key="Layout_66" name="MetabGlyph" metabolite="Metabolite_17">
+          <BoundingBox>
+            <Position x="423.3809313566944" y="300.5891884220946"/>
+            <Dimensions width="68" height="28"/>
+          </BoundingBox>
+        </MetaboliteGlyph>
+        <MetaboliteGlyph key="Layout_67" name="MetabGlyph" metabolite="Metabolite_13">
+          <BoundingBox>
+            <Position x="428.1806208528865" y="173.3842847262395"/>
+            <Dimensions width="148" height="28"/>
+          </BoundingBox>
+        </MetaboliteGlyph>
+        <MetaboliteGlyph key="Layout_68" name="MetabGlyph" metabolite="Metabolite_21">
+          <BoundingBox>
+            <Position x="443.5421869611982" y="236.0101815625403"/>
+            <Dimensions width="132" height="28"/>
+          </BoundingBox>
+        </MetaboliteGlyph>
+        <MetaboliteGlyph key="Layout_69" name="MetabGlyph" metabolite="Metabolite_23">
+          <BoundingBox>
+            <Position x="356.9794290822656" y="207.3200487727909"/>
+            <Dimensions width="68" height="28"/>
+          </BoundingBox>
+        </MetaboliteGlyph>
+        <MetaboliteGlyph key="Layout_70" name="MetabGlyph" metabolite="Metabolite_21">
+          <BoundingBox>
+            <Position x="733.2494734929396" y="317.5191186130714"/>
+            <Dimensions width="132" height="28"/>
+          </BoundingBox>
+        </MetaboliteGlyph>
+        <MetaboliteGlyph key="Layout_71" name="MetabGlyph" metabolite="Metabolite_3">
+          <BoundingBox>
+            <Position x="703.1371364793681" y="245.2494632897178"/>
+            <Dimensions width="52" height="28"/>
+          </BoundingBox>
+        </MetaboliteGlyph>
+        <MetaboliteGlyph key="Layout_72" name="MetabGlyph" metabolite="Metabolite_15">
+          <BoundingBox>
+            <Position x="819.800552714576" y="184.6915691904833"/>
+            <Dimensions width="68" height="28"/>
+          </BoundingBox>
+        </MetaboliteGlyph>
+      </ListOfMetabGlyphs>
+      <ListOfReactionGlyphs>
+        <ReactionGlyph key="Layout_73" name="ReactionGlyph" reaction="Reaction_0">
+          <Curve>
+            <ListOfCurveSegments>
+              <CurveSegment xsi:type="LineSegment">
+                <Start x="244.485016242399" y="262.1705050617574"/>
+                <End x="246.8856936546054" y="262.7404761066092"/>
+              </CurveSegment>
+            </ListOfCurveSegments>
+          </Curve>
+          <ListOfMetaboliteReferenceGlyphs>
+            <MetaboliteReferenceGlyph key="Layout_74" name="MetabReferenceGlyph" metaboliteGlyph="Layout_55" role="sideProduct">
+              <Curve>
+                <ListOfCurveSegments>
+                  <CurveSegment xsi:type="CubicBezier">
+                    <Start x="246.8856936546054" y="262.7404761066092"/>
+                    <End x="269.2793120063467" y="234.192965263499"/>
+                    <BasePoint1 x="249.2863710668117" y="263.3104471514609"/>
+                    <BasePoint2 x="259.8830108896308" y="248.8941989686928"/>
+                  </CurveSegment>
+                </ListOfCurveSegments>
+              </Curve>
+            </MetaboliteReferenceGlyph>
+            <MetaboliteReferenceGlyph key="Layout_75" name="MetabReferenceGlyph" metaboliteGlyph="Layout_56" role="sideProduct">
+              <Curve>
+                <ListOfCurveSegments>
+                  <CurveSegment xsi:type="CubicBezier">
+                    <Start x="246.8856936546054" y="262.7404761066092"/>
+                    <End x="254.5042745777834" y="302.1174368019019"/>
+                    <BasePoint1 x="249.2863710668117" y="263.3104471514609"/>
+                    <BasePoint2 x="252.4954921753491" y="282.8564347378943"/>
+                  </CurveSegment>
+                </ListOfCurveSegments>
+              </Curve>
+            </MetaboliteReferenceGlyph>
+            <MetaboliteReferenceGlyph key="Layout_76" name="MetabReferenceGlyph" metaboliteGlyph="Layout_57" role="modifier">
+              <Curve>
+                <ListOfCurveSegments>
+                  <CurveSegment xsi:type="CubicBezier">
+                    <Start x="204.832410035333" y="259.7375357415549"/>
+                    <End x="243.3753589573106" y="272.185029037814"/>
+                    <BasePoint1 x="224.1038844963218" y="265.9612823896845"/>
+                    <BasePoint2 x="241.065362966119" y="281.9145674914447"/>
+                  </CurveSegment>
+                </ListOfCurveSegments>
+              </Curve>
+            </MetaboliteReferenceGlyph>
+          </ListOfMetaboliteReferenceGlyphs>
+        </ReactionGlyph>
+        <ReactionGlyph key="Layout_77" name="ReactionGlyph" reaction="Reaction_1">
+          <Curve>
+            <ListOfCurveSegments>
+              <CurveSegment xsi:type="LineSegment">
+                <Start x="555.7226944368506" y="67.908771625779"/>
+                <End x="556.5111175122199" y="80.54459656897515"/>
+              </CurveSegment>
+            </ListOfCurveSegments>
+          </Curve>
+          <ListOfMetaboliteReferenceGlyphs>
+            <MetaboliteReferenceGlyph key="Layout_78" name="MetabReferenceGlyph" metaboliteGlyph="Layout_58" role="sideSubstrate">
+              <Curve>
+                <ListOfCurveSegments>
+                  <CurveSegment xsi:type="CubicBezier">
+                    <Start x="555.7226944368506" y="67.908771625779"/>
+                    <End x="553.6666393967612" y="33"/>
+                    <BasePoint1 x="554.9342713614811" y="55.27294668258283"/>
+                    <BasePoint2 x="554.1033496102789" y="40.97751710549237"/>
+                  </CurveSegment>
+                </ListOfCurveSegments>
+              </Curve>
+            </MetaboliteReferenceGlyph>
+            <MetaboliteReferenceGlyph key="Layout_79" name="MetabReferenceGlyph" metaboliteGlyph="Layout_59" role="sideProduct">
+              <Curve>
+                <ListOfCurveSegments>
+                  <CurveSegment xsi:type="CubicBezier">
+                    <Start x="556.5111175122199" y="80.54459656897515"/>
+                    <End x="514.5969015882946" y="168.6597697219977"/>
+                    <BasePoint1 x="557.2995405875894" y="93.18042151217132"/>
+                    <BasePoint2 x="536.1453268567843" y="134.0790518528835"/>
+                  </CurveSegment>
+                </ListOfCurveSegments>
+              </Curve>
+            </MetaboliteReferenceGlyph>
+            <MetaboliteReferenceGlyph key="Layout_80" name="MetabReferenceGlyph" metaboliteGlyph="Layout_60" role="sideProduct">
+              <Curve>
+                <ListOfCurveSegments>
+                  <CurveSegment xsi:type="CubicBezier">
+                    <Start x="556.5111175122199" y="80.54459656897515"/>
+                    <End x="586.09142444399" y="93.12085930860219"/>
+                    <BasePoint1 x="557.2995405875894" y="93.18042151217132"/>
+                    <BasePoint2 x="571.892588284632" y="96.30959664618581"/>
+                  </CurveSegment>
+                </ListOfCurveSegments>
+              </Curve>
+            </MetaboliteReferenceGlyph>
+            <MetaboliteReferenceGlyph key="Layout_81" name="MetabReferenceGlyph" metaboliteGlyph="Layout_61" role="modifier">
+              <Curve>
+                <ListOfCurveSegments>
+                  <CurveSegment xsi:type="CubicBezier">
+                    <Start x="485.9553281232556" y="60.75834811886984"/>
+                    <End x="546.1363155306479" y="74.84943155131432"/>
+                    <BasePoint1 x="516.0458218269519" y="67.80388983509208"/>
+                    <BasePoint2 x="536.1557250867606" y="75.47217900525158"/>
+                  </CurveSegment>
+                </ListOfCurveSegments>
+              </Curve>
+            </MetaboliteReferenceGlyph>
+          </ListOfMetaboliteReferenceGlyphs>
+        </ReactionGlyph>
+        <ReactionGlyph key="Layout_82" name="ReactionGlyph" reaction="Reaction_2">
+          <Curve>
+            <ListOfCurveSegments>
+              <CurveSegment xsi:type="LineSegment">
+                <Start x="533.0970014240753" y="408.7066130160039"/>
+                <End x="533.8545858930014" y="408.7550152361545"/>
+              </CurveSegment>
+            </ListOfCurveSegments>
+          </Curve>
+          <ListOfMetaboliteReferenceGlyphs>
+            <MetaboliteReferenceGlyph key="Layout_83" name="MetabReferenceGlyph" metaboliteGlyph="Layout_62" role="sideSubstrate">
+              <Curve>
+                <ListOfCurveSegments>
+                  <CurveSegment xsi:type="CubicBezier">
+                    <Start x="533.0970014240753" y="408.7066130160039"/>
+                    <End x="501.2236778345318" y="410.4421888346139"/>
+                    <BasePoint1 x="532.3394169551493" y="408.6582107958533"/>
+                    <BasePoint2 x="516.592151277609" y="409.538099260196"/>
+                  </CurveSegment>
+                </ListOfCurveSegments>
+              </Curve>
+            </MetaboliteReferenceGlyph>
+            <MetaboliteReferenceGlyph key="Layout_84" name="MetabReferenceGlyph" metaboliteGlyph="Layout_63" role="sideSubstrate">
+              <Curve>
+                <ListOfCurveSegments>
+                  <CurveSegment xsi:type="CubicBezier">
+                    <Start x="533.0970014240753" y="408.7066130160039"/>
+                    <End x="568.7729736143319" y="410.5957891656236"/>
+                    <BasePoint1 x="532.3394169551493" y="408.6582107958533"/>
+                    <BasePoint2 x="550.366799167509" y="409.6148994257007"/>
+                  </CurveSegment>
+                </ListOfCurveSegments>
+              </Curve>
+            </MetaboliteReferenceGlyph>
+            <MetaboliteReferenceGlyph key="Layout_85" name="MetabReferenceGlyph" metaboliteGlyph="Layout_64" role="sideProduct">
+              <Curve>
+                <ListOfCurveSegments>
+                  <CurveSegment xsi:type="CubicBezier">
+                    <Start x="533.8545858930014" y="408.7550152361545"/>
+                    <End x="544.9592283051913" y="367.9041284749828"/>
+                    <BasePoint1 x="534.6121703619274" y="408.8034174563051"/>
+                    <BasePoint2 x="539.9750954507908" y="388.3658735206816"/>
+                  </CurveSegment>
+                </ListOfCurveSegments>
+              </Curve>
+            </MetaboliteReferenceGlyph>
+            <MetaboliteReferenceGlyph key="Layout_86" name="MetabReferenceGlyph" metaboliteGlyph="Layout_65" role="sideProduct">
+              <Curve>
+                <ListOfCurveSegments>
+                  <CurveSegment xsi:type="CubicBezier">
+                    <Start x="533.8545858930014" y="408.7550152361545"/>
+                    <End x="535.1662607415404" y="457.5278518127598"/>
+                    <BasePoint1 x="534.6121703619274" y="408.8034174563051"/>
+                    <BasePoint2 x="535.0786116689654" y="433.1777351895701"/>
+                  </CurveSegment>
+                </ListOfCurveSegments>
+              </Curve>
+            </MetaboliteReferenceGlyph>
+            <MetaboliteReferenceGlyph key="Layout_87" name="MetabReferenceGlyph" metaboliteGlyph="Layout_66" role="modifier">
+              <Curve>
+                <ListOfCurveSegments>
+                  <CurveSegment xsi:type="CubicBezier">
+                    <Start x="474.7036813481492" y="333.5891884220946"/>
+                    <End x="534.1133956111755" y="398.7511616396449"/>
+                    <BasePoint1 x="504.4085384796624" y="366.1701750308698"/>
+                    <BasePoint2 x="534.7509975638127" y="388.7715091532107"/>
+                  </CurveSegment>
+                </ListOfCurveSegments>
+              </Curve>
+            </MetaboliteReferenceGlyph>
+          </ListOfMetaboliteReferenceGlyphs>
+        </ReactionGlyph>
+        <ReactionGlyph key="Layout_88" name="ReactionGlyph" reaction="Reaction_3">
+          <Curve>
+            <ListOfCurveSegments>
+              <CurveSegment xsi:type="LineSegment">
+                <Start x="292.6104193033721" y="584.7558787715064"/>
+                <End x="293.3465759142032" y="591.0184684551365"/>
+              </CurveSegment>
+            </ListOfCurveSegments>
+          </Curve>
+          <ListOfMetaboliteReferenceGlyphs>
+            <MetaboliteReferenceGlyph key="Layout_89" name="MetabReferenceGlyph" metaboliteGlyph="Layout_67" role="sideSubstrate">
+              <Curve>
+                <ListOfCurveSegments>
+                  <CurveSegment xsi:type="CubicBezier">
+                    <Start x="292.6104193033721" y="584.7558787715064"/>
+                    <End x="491.9639785345423" y="206.3842847262395"/>
+                    <BasePoint1 x="291.8742626925409" y="578.4932890878764"/>
+                    <BasePoint2 x="391.7350814608338" y="390.8731394861504"/>
+                  </CurveSegment>
+                </ListOfCurveSegments>
+              </Curve>
+            </MetaboliteReferenceGlyph>
+            <MetaboliteReferenceGlyph key="Layout_90" name="MetabReferenceGlyph" metaboliteGlyph="Layout_68" role="sideProduct">
+              <Curve>
+                <ListOfCurveSegments>
+                  <CurveSegment xsi:type="CubicBezier">
+                    <Start x="293.3465759142032" y="591.0184684551365"/>
+                    <End x="497.7538974430919" y="269.0101815625403"/>
+                    <BasePoint1 x="294.0827325250344" y="597.2810581387665"/>
+                    <BasePoint2 x="396.1023541367709" y="434.711267271561"/>
+                  </CurveSegment>
+                </ListOfCurveSegments>
+              </Curve>
+            </MetaboliteReferenceGlyph>
+            <MetaboliteReferenceGlyph key="Layout_91" name="MetabReferenceGlyph" metaboliteGlyph="Layout_69" role="modifier">
+              <Curve>
+                <ListOfCurveSegments>
+                  <CurveSegment xsi:type="CubicBezier">
+                    <Start x="386.4000136851685" y="240.3200487727909"/>
+                    <End x="302.9101174513713" y="586.7197288384401"/>
+                    <BasePoint1 x="344.6550655682699" y="413.5198888056155"/>
+                    <BasePoint2 x="312.841737293955" y="585.5522840635588"/>
+                  </CurveSegment>
+                </ListOfCurveSegments>
+              </Curve>
+            </MetaboliteReferenceGlyph>
+          </ListOfMetaboliteReferenceGlyphs>
+        </ReactionGlyph>
+        <ReactionGlyph key="Layout_92" name="ReactionGlyph" reaction="Reaction_4">
+          <Curve>
+            <ListOfCurveSegments>
+              <CurveSegment xsi:type="LineSegment">
+                <Start x="789.3531542254074" y="277.7347463463362"/>
+                <End x="782.3419205240501" y="270.5077808140008"/>
+              </CurveSegment>
+            </ListOfCurveSegments>
+          </Curve>
+          <ListOfMetaboliteReferenceGlyphs>
+            <MetaboliteReferenceGlyph key="Layout_93" name="MetabReferenceGlyph" metaboliteGlyph="Layout_70" role="sideSubstrate">
+              <Curve>
+                <ListOfCurveSegments>
+                  <CurveSegment xsi:type="CubicBezier">
+                    <Start x="789.3531542254074" y="277.7347463463362"/>
+                    <End x="798.0720748875997" y="312.5191186130714"/>
+                    <BasePoint1 x="796.3643879267645" y="284.9617118786716"/>
+                    <BasePoint2 x="798.9710398325215" y="300.5471566289553"/>
+                  </CurveSegment>
+                </ListOfCurveSegments>
+              </Curve>
+            </MetaboliteReferenceGlyph>
+            <MetaboliteReferenceGlyph key="Layout_94" name="MetabReferenceGlyph" metaboliteGlyph="Layout_71" role="sideProduct">
+              <Curve>
+                <ListOfCurveSegments>
+                  <CurveSegment xsi:type="CubicBezier">
+                    <Start x="782.3419205240501" y="270.5077808140008"/>
+                    <End x="760.1371364793681" y="261.9548607060572"/>
+                    <BasePoint1 x="775.330686822693" y="263.2808152816654"/>
+                    <BasePoint2 x="765.9811032256912" y="260.8110966107774"/>
+                  </CurveSegment>
+                </ListOfCurveSegments>
+              </Curve>
+            </MetaboliteReferenceGlyph>
+            <MetaboliteReferenceGlyph key="Layout_95" name="MetabReferenceGlyph" metaboliteGlyph="Layout_72" role="modifier">
+              <Curve>
+                <ListOfCurveSegments>
+                  <CurveSegment xsi:type="CubicBezier">
+                    <Start x="836.9348453703917" y="217.6915691904833"/>
+                    <End x="793.024919527679" y="267.1581331469142"/>
+                    <BasePoint1 x="814.9798824490354" y="242.4248511686988"/>
+                    <BasePoint2 x="800.2023016806293" y="260.19500271366"/>
+                  </CurveSegment>
+                </ListOfCurveSegments>
+              </Curve>
+            </MetaboliteReferenceGlyph>
+          </ListOfMetaboliteReferenceGlyphs>
+        </ReactionGlyph>
+      </ListOfReactionGlyphs>
+      <ListOfTextGlyphs>
+        <TextGlyph key="Layout_96" name="TextGlyph" graphicalObject="Layout_55" originOfText="Metabolite_1">
+          <BoundingBox>
+            <Position x="256.3252848453722" y="201.192965263499"/>
+            <Dimensions width="48" height="24"/>
+          </BoundingBox>
+        </TextGlyph>
+        <TextGlyph key="Layout_97" name="TextGlyph" graphicalObject="Layout_56" originOfText="Metabolite_3">
+          <BoundingBox>
+            <Position x="231.0589732957587" y="307.1174368019019"/>
+            <Dimensions width="48" height="24"/>
+          </BoundingBox>
+        </TextGlyph>
+        <TextGlyph key="Layout_98" name="TextGlyph" graphicalObject="Layout_57" originOfText="Metabolite_5">
+          <BoundingBox>
+            <Position x="0" y="226.7375357415549"/>
+            <Dimensions width="288" height="24"/>
+          </BoundingBox>
+        </TextGlyph>
+        <TextGlyph key="Layout_99" name="TextGlyph" graphicalObject="Layout_58" originOfText="Metabolite_7">
+          <BoundingBox>
+            <Position x="518.5852823732421" y="0"/>
+            <Dimensions width="64" height="24"/>
+          </BoundingBox>
+        </TextGlyph>
+        <TextGlyph key="Layout_100" name="TextGlyph" graphicalObject="Layout_59" originOfText="Metabolite_13">
+          <BoundingBox>
+            <Position x="429.8476018098822" y="173.6597697219977"/>
+            <Dimensions width="144" height="24"/>
+          </BoundingBox>
+        </TextGlyph>
+        <TextGlyph key="Layout_101" name="TextGlyph" graphicalObject="Layout_60" originOfText="Metabolite_19">
+          <BoundingBox>
+            <Position x="591.09142444399" y="79.05672914192564"/>
+            <Dimensions width="48" height="24"/>
+          </BoundingBox>
+        </TextGlyph>
+        <TextGlyph key="Layout_102" name="TextGlyph" graphicalObject="Layout_61" originOfText="Metabolite_9">
+          <BoundingBox>
+            <Position x="412.9553281232556" y="37.62668914250298"/>
+            <Dimensions width="64" height="24"/>
+          </BoundingBox>
+        </TextGlyph>
+        <TextGlyph key="Layout_103" name="TextGlyph" graphicalObject="Layout_62" originOfText="Metabolite_3">
+          <BoundingBox>
+            <Position x="444.2236778345318" y="398.2195311303312"/>
+            <Dimensions width="48" height="24"/>
+          </BoundingBox>
+        </TextGlyph>
+        <TextGlyph key="Layout_104" name="TextGlyph" graphicalObject="Layout_63" originOfText="Metabolite_11">
+          <BoundingBox>
+            <Position x="573.7729736143319" y="398.2444047543995"/>
+            <Dimensions width="48" height="24"/>
+          </BoundingBox>
+        </TextGlyph>
+        <TextGlyph key="Layout_105" name="TextGlyph" graphicalObject="Layout_64" originOfText="Metabolite_7">
+          <BoundingBox>
+            <Position x="515.7660136019185" y="334.9041284749828"/>
+            <Dimensions width="64" height="24"/>
+          </BoundingBox>
+        </TextGlyph>
+        <TextGlyph key="Layout_106" name="TextGlyph" graphicalObject="Layout_65" originOfText="Metabolite_25">
+          <BoundingBox>
+            <Position x="509.3823272254658" y="462.5278518127598"/>
+            <Dimensions width="48" height="24"/>
+          </BoundingBox>
+        </TextGlyph>
+        <TextGlyph key="Layout_107" name="TextGlyph" graphicalObject="Layout_66" originOfText="Metabolite_17">
+          <BoundingBox>
+            <Position x="423.3809313566944" y="300.5891884220946"/>
+            <Dimensions width="64" height="24"/>
+          </BoundingBox>
+        </TextGlyph>
+        <TextGlyph key="Layout_108" name="TextGlyph" graphicalObject="Layout_67" originOfText="Metabolite_13">
+          <BoundingBox>
+            <Position x="428.1806208528865" y="173.3842847262395"/>
+            <Dimensions width="144" height="24"/>
+          </BoundingBox>
+        </TextGlyph>
+        <TextGlyph key="Layout_109" name="TextGlyph" graphicalObject="Layout_68" originOfText="Metabolite_21">
+          <BoundingBox>
+            <Position x="443.5421869611982" y="236.0101815625403"/>
+            <Dimensions width="128" height="24"/>
+          </BoundingBox>
+        </TextGlyph>
+        <TextGlyph key="Layout_110" name="TextGlyph" graphicalObject="Layout_69" originOfText="Metabolite_23">
+          <BoundingBox>
+            <Position x="356.9794290822656" y="207.3200487727909"/>
+            <Dimensions width="64" height="24"/>
+          </BoundingBox>
+        </TextGlyph>
+        <TextGlyph key="Layout_111" name="TextGlyph" graphicalObject="Layout_70" originOfText="Metabolite_21">
+          <BoundingBox>
+            <Position x="733.2494734929396" y="317.5191186130714"/>
+            <Dimensions width="128" height="24"/>
+          </BoundingBox>
+        </TextGlyph>
+        <TextGlyph key="Layout_112" name="TextGlyph" graphicalObject="Layout_71" originOfText="Metabolite_3">
+          <BoundingBox>
+            <Position x="703.1371364793681" y="245.2494632897178"/>
+            <Dimensions width="48" height="24"/>
+          </BoundingBox>
+        </TextGlyph>
+        <TextGlyph key="Layout_113" name="TextGlyph" graphicalObject="Layout_72" originOfText="Metabolite_15">
+          <BoundingBox>
+            <Position x="819.800552714576" y="184.6915691904833"/>
+            <Dimensions width="64" height="24"/>
           </BoundingBox>
         </TextGlyph>
       </ListOfTextGlyphs>

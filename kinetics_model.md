@@ -5,30 +5,24 @@ As a proof of concept, we used glycogen as a model molecule to test the effect o
 
 To analyse the efficiency of the branching (GlgB) and debranching (GlgX) enzymes in glycogen production, we generated a set of differential equations to explain glycogen biosynthesis.  We used COPASI (1) (http://copasi.org/) to simulate the biochemical reactions involved in the production of glycogen in bacterial cell. We used the the glycogen biosynthesis pathway defined by Wilson WA et al (2) to build our model. The kinetics parameters were found  at http://www.metacyc.org/ 
 
-
 \begin{center}	
 Glycogen Pathway (2)
 \end{center}
 ![](pathway.png) 
 
-
-####Assumptions:
 We generated a deterministic model taking into consideration the following assumptions:
 
-- All enzyme concentrations are constant and similar. We fixed the enzyme concentrations to 1x10-5 mmol/mL
+1. All enzyme concentrations are constant and similar. We fixed the enzyme concentrations to 1x10-5 mmol/mL
+2. Glucose is available and limiting (initial concentration 10 mmol/ml)
+3. Reactions follow simple reversible or irreversible Michaelis-Menten kinetics.
+4. There is no additional flux of substrates after the beginning of the simulation.  
+5. The intracellular metabolite concentrations (ATP, AMP, ADP and PPi) are constant. They are all set to 1x10-5 mmol/mL.
+6. Only competitive inhibition by the product occurs. For simplicity, other external inhibitors are not considered in the model.
+7. GlgX and GlgP were considered together in the same as the action of both enzymes together is required to get debranching of glycogen.
+8. The reaction rates for all the reactions is V = 0.01
 
-- Glucose is available in excess.
-
-- Reactions follow simple reversible or irreversible Michaelis-Menten kinetics.
-
-- There is no additional flux of substrates after the beginning of the simulation. 
-
-- The intracellular metabolite concentrations (ATP, AMP and PPi) are constant. They are all set to 1x10-5 mmol/mL.
-
-- Only competitive inhibition by the product occurs. For simplicity, other external inhibitors are not considered in the model.
-
-
-
+GlgB catalyzes 2 consecutive reactions. First, it cleaves an alpha 1,4 glycosidic linkage in a linear glucan to form a non-reducing-end oligosaccharide chain that is transferred to a C-6 
+hydroxyl group of the same or another glucan. GlgP removes up to 5 glucose units from the glycogen outer chain and GlgX only cuts when there are 3-4 glucose residues left at the branching point. 
 ###Enzyme kinetic rates
 
 Enzyme| Km (mmol/mL)| Reference
@@ -43,25 +37,87 @@ GlgB(Glucan1-4)| 1.42x10-5| [(6)](http://www.ncbi.nlm.nih.gov/pubmed/11368019)
 GlgX (Glycogen)| 1x10-6| -not found-
 GlgP (Glycogen)| 1x10-6| -not found-
 
+<table style="width:100%">
+  <tr>
+    <th>Enzyme</th>
+    <th>Km (mmol/mL)</th> 
+    <th>Reference</th>
+  </tr>
+  <tr>
+    <td>Pgm(G1P)</td>
+    <td>2.9x10-4</td> 
+    <td>(3)</td>
+  </tr>
+    <tr>
+    <td>Pgm(G6P)</td>
+    <td>5.6x10-6</td> 
+    <td>(3)</td>
+  </tr>
+    <tr>
+    <td>GlgC(ADPG)</td>
+    <td>4x10-5</td> 
+    <td>(4)</td>
+  </tr>
+    <tr>
+    <td>GlgC(ADPG)</td>
+    <td>1.67x10-4</td> 
+    <td>(4)</td>
+  </tr>
+      <tr>
+    <td>AspP (ADPG)</td>
+    <td>3.2x10-4</td> 
+    <td>(7)</td>
+  </tr>
+      <tr>
+    <td>GlgA</td>
+    <td>3.5x10-5</td> 
+    <td>(5)</td>
+  </tr>
+        <tr>
+    <td>GlgB(Glucan1-4)</td>
+    <td>1.42x10-5</td> 
+    <td>(6)</td>
+  </tr>
+        <tr>
+    <td>GlgX (Glycogen)</td>
+    <td>1x10-6</td> 
+    <td>Not found</td>
+  </tr>
+<tr>
+    <td>GlgP (Glycogen)</td>
+    <td>1x10-6</td> 
+    <td>Not found</td>
+  </tr>
+</table>
+
+
 \newpage
 
-	
-GlgB catalyzes 2 consecutive reactions. First, it cleaves an alpha 1,4 glycosidic linkage in a 1,4-alpha-D-glucan to form a non-reducing-end oligosaccharide chain that is transferred to a C-6 hydroxyl group of the same or another alpha-1,4-D-glucan.
+
+All the reactions of the pathway are highly efficient, as all the initial glucose-6-P converted to glucose-1-P and ADP-glucose, that is the glycosil donor to syntehsase glycogen. Part of the glucose-1-P is recovered due to the GlgX debranching activity.
+We set all the reaction rates to 0.01 mmol/(mL*s) expect for GlgX-GlgP that was set to 0.002 mmol/(mL*s) to avoid the immediate degradation of all the glycogen being produced. Those were considered our basal conditions. After 50 minutes, all the initial glucose is being converted into glycogen 
 
 
-GlgX and GlgP were considered together as the action of both enzymes is required to get debranching of glycogen. 
-
-2 substrate irreversible reaction: Vmax*substrateA*substrateB/(KmB*substrateA + kmA*substrateB + substrateA*substrateB)
-
-All the reactions of the pathway are highly efficient, as all the initial glucose-6-P converted to glucose-1-P and ADP-glucose is used in the production of glycogen. Part of the glucose-1-P is recovered due to the GlgX debranching activity.
-
-We run our model for 2500 seconds and collect the data in intevals of 0.05 seconds starting with a concentration of 10 mmol/mL of Glucose-6-P (G6P). After the time course, the majority of the starting glucose has been used to produce glycogen and only a small part of the glucose stays unbranched.
+We run our model for 50 minutes and collect the data in intevals of 0.05 seconds starting with a concentration of 10 mmol/mL of Glucose-6-P (G6P). After the time course, the majority of the starting glucose has been used to produce glycogen and only a small part of the glucose stays unbranched.
 
 
 ![](final_model.png)
 
+When the enzyme concentration is small, Vmax is much smaller. The reaction rate still increases with increasing substrate concentration, but levels off at a much lower rate. By increasing the enzyme concentration, the maximum reaction rate greatly increases.
+
 Differential equations
 ===
+<html>
+<head>
+<title>MathJax TeX Test Page</title>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+<script type="text/javascript"
+  src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+</head>
+<body>
 
 $$
 \begin{array}{ccl}
@@ -81,9 +137,9 @@ $$
  && \\ 
  \; && \;  { \, - \,  \,  \left(\frac {{V}_{\mathrm{(AspP)}} \, \cdot \, {\mathrm{[ADPG]}} }  {{\mathrm{Km}}_{\mathrm{(AspP)}} \, + \, {\mathrm{[ADPG]}} } \right) } \\ 
  && \\ 
-\frac {\mathrm{d}\left( {{\mathrm{[1,4glucan]}} \,  } \right) }  {\mathrm{d}{t} }  \; &=& \;  { \, + \,  \,  \left(\frac {{V}_{\mathrm{(GlgA)}} \, \cdot \, {\mathrm{[ADPG]}} }  {{\mathrm{Km}}_{\mathrm{(GlgA)}} \, + \, {\mathrm{[ADPG]}} } \right) } \\ 
+\frac {\mathrm{d}\left( {{\mathrm{[1,4glucan]}} \, \cdot \, {V}_{\mathrm{cytoplasm}} } \right) }  {\mathrm{d}{t} }  \; &=& \;  { \, + \, \left(\frac {{V}_{\mathrm{(GlgA)}} \, \cdot \, {\mathrm{[ADPG]}} }  {{\mathrm{Km}}_{\mathrm{(GlgA)}} \, + \, {\mathrm{[ADPG]}} } \right) } \\ 
  && \\ 
- \; && \;  { \, - \,  \,  \left(\frac {{V}_{\mathrm{(GlgB)}} \, \cdot \, {\mathrm{[1,4glucan]}} }  {{\mathrm{Km}}_{\mathrm{(GlgB)}} \, + \, {\mathrm{[1,4glucan]}} } \right) } \\ 
+ \; && \;  { \, - \,  \left(\frac {{V}_{\mathrm{(GlgB)}} \, \cdot \, {\mathrm{[1,4glucan]}} }  {{\mathrm{Km}}_{\mathrm{(GlgB)}} \, + \, {\mathrm{[1,4glucan]}} } \right) } \\ 
  && \\ 
 \frac {\mathrm{d}\left( {{\mathrm{[Glycogen]}} \,  } \right) }  {\mathrm{d}{t} }  \; &=& \;  { \, + \,  \, \left(\frac {{V}_{\mathrm{(GlgB)}} \, \cdot \, {\mathrm{[1,4glucan]}} }  {{\mathrm{Km}}_{\mathrm{(GlgB)}} \, + \, {\mathrm{[1,4glucan]}} } \right) } \\ 
  && \\ 
@@ -91,7 +147,8 @@ $$
  && \\ 
 \end{array}
 $$
-
+</body>
+</html>
 
 ##References
 

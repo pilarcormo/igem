@@ -1,0 +1,35 @@
+---
+title: "igem"
+output: html_document
+bibliography: igem.bib
+csl: biomed-central.csl
+---
+
+[@Melendez:1998aa]
+
+[@Bajka:2010aa]
+
+[@Blennow:2002aa]
+[@Brautaset:2000aa]
+
+[@Figueroa:2011aa]
+
+[@Fox:1976aa]
+
+[@Melendez-Hevia:1993aa]
+
+[@Melendez:1997aa]
+
+[@Mikkelsen:2001aa]
+
+[@Wilson:2010aa]
+
+[@Ball:2003aa]
+
+[@Hoops:2006aa]
+
+[@Moreno-Bruna:2001aa]
+
+glycogen phosphorylation 
+
+[@Tagliabracci:2011aa]
